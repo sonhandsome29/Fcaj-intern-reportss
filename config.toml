@@ -1,6 +1,6 @@
 baseURL = "https://sazzazaa.github.io/fcaj-intern-report/"
-relativeURLs = false
-canonifyURLs = false
+canonifyURLs = true
+relativeURLs = true
 defaultContentLanguage = "en"
 
 # Change the default theme to be use when building the site with Hugo
