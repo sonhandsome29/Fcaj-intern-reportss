@@ -6,8 +6,6 @@ chapter: false
 pre: " <b> 2. </b> "
 ---
 
-In this section, you need to summarize the contents of the workshop you **plan** to implement.
-
 # Project Management Dashboard on AWS Cloud
 ## Proposed Deployment of a 3-Tier Web Application Architecture
 
