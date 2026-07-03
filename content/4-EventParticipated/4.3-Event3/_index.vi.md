@@ -1,6 +1,6 @@
 ---
 title: "Event 3"
-date: 2026-06-20
+date: 2026-07-04
 weight: 3
 chapter: false
 pre: " <b> 4.3. </b> "
@@ -26,14 +26,15 @@ pre: " <b> 4.3. </b> "
 #### Thể thức thi đấu đối kháng (Knockout)
 
 - **Cấu trúc giải đấu:** 8 đội chia thành các cặp thi đấu trực tiếp (1 vs 1) qua các vòng Tứ kết, Bán kết và Chung kết.
-- **Giới hạn trận đấu:** Mỗi lượt đấu sẽ giải quyết đúng 10 câu hỏi trắc nghiệm được hiển thị chung trên màn hình lớn.
+- **Giới hạn trận đấu:** Mỗi lượt đấu sẽ giải quyết đúng 10 câu hỏi trắc nghiệm.
 
-#### Luật tính điểm "Sinh tử"
+#### Luật thi đấu đồng thời & Tính điểm "Sinh tử"
 
-Quy tắc **"Đúng cộng - Sai trừ"** tạo ra áp lực cực lớn cho các đội:
+Quy tắc thi đấu áp đặt một áp lực thời gian và tâm lý cực lớn lên cả 2 đội:
+- **Trả lời đồng thời:** Chỉ có 1 câu hỏi xuất hiện trên màn hình với thời gian đếm ngược chung. Cả 2 đội **bắt buộc** phải chốt đáp án, không đội nào được quyền bỏ qua. 
+- **Kiểm tra kết quả:** Hết thời gian, hệ thống sẽ mở đáp án của cả 2 đội cùng lúc.
 - **Trả lời đúng:** Đội được cộng điểm lợi thế.
 - **Trả lời sai:** Đội bị trừ điểm trực tiếp vào tổng điểm hiện có.
-- **Không trả lời:** Chấp nhận giữ nguyên điểm số, không bị phạt.
 
 #### Phân loại câu hỏi AWS
 
@@ -44,9 +45,9 @@ Quy tắc **"Đúng cộng - Sai trừ"** tạo ra áp lực cực lớn cho cá
 
 #### Chiến Thuật Làm Bài Trắc Nghiệm
 
-- **Kỷ luật làm bài:** Tuyệt đối không "đoán mò" (đánh lụi). Thà bỏ qua câu hỏi để bảo toàn điểm số còn hơn chọn sai và bị trừ điểm oan uổng.
-- **Kỹ năng Scan Keyword:** Không đọc từng chữ trong đề bài dài. Tập trung quét các từ khóa cốt lõi (ví dụ: *most cost-effective*, *decouple*, *single-digit millisecond latency*) để định hình ngay hướng giải quyết.
-- **Nghệ thuật loại trừ:** Không vội vàng tìm câu đúng, mà tập trung chỉ ra điểm vô lý của 3 đáp án sai để chốt lại lựa chọn cuối cùng an toàn nhất.
+- **Quản lý rủi ro:** Vì luật thi không cho phép bỏ qua câu hỏi, các đội không được phép hoảng loạn. Khi gặp câu khó, thay vì "đoán mò" (đánh lụi) dễ dẫn đến bị trừ điểm, họ buộc phải bình tĩnh phân tích để có sự lựa chọn rủi ro thấp nhất.
+- **Kỹ năng Scan Keyword:** Không đọc từng chữ trong đề bài dài. Tập trung quét các từ khóa cốt lõi (ví dụ: *most cost-effective*, *decouple*, *single-digit millisecond latency*) để định hình ngay hướng giải quyết trong thời gian ngắn.
+- **Nghệ thuật loại trừ:** Áp lực thời gian chung khiến việc tìm ngay câu đúng rất khó. Thay vào đó, tập trung chỉ ra điểm vô lý của các đáp án sai để loại trừ dần, từ đó chốt lại lựa chọn cuối cùng an toàn nhất trước khi hết giờ.
 
 #### Kiến Thức Công Nghệ Thực Chiến
 
@@ -55,7 +56,7 @@ Quy tắc **"Đúng cộng - Sai trừ"** tạo ra áp lực cực lớn cho cá
 
 #### Tâm Lý Thi Đấu
 
-- **Giữ "cái đầu lạnh":** Sự vội vàng ở những câu hỏi đầu tiên thường dẫn đến sai lầm. Cần giữ bình tĩnh ngay cả khi bị đối thủ dẫn trước.
+- **Giữ "cái đầu lạnh":** Việc phải nhìn thấy đáp án của đối thủ sau mỗi câu hỏi rất dễ gây dao động tâm lý. Cần giữ bình tĩnh ngay cả khi bị đối thủ dẫn trước hoặc lỡ trả lời sai và bị trừ điểm.
 - **Tập trung cao độ:** Chắt chiu từng cơ hội trong giới hạn 10 câu hỏi, vì một câu trả lời đúng ở phút chót có thể lật ngược hoàn toàn thế cờ.
 
 ### Ứng Dụng Vào Công Việc (Và Học Tập)
@@ -69,12 +70,12 @@ Quy tắc **"Đúng cộng - Sai trừ"** tạo ra áp lực cực lớn cho cá
 Tham gia sự kiện **“AWS GameDay - 8 Đội Tranh Hùng”** dưới góc độ khán giả là một trải nghiệm cực kỳ kịch tính và mang lại nhiều bài học bất ngờ, vượt xa việc chỉ đọc tài liệu thông thường. Một số trải nghiệm nổi bật:
 
 #### Áp lực từ hàng ghế khán giả
-- Dù không trực tiếp thi đấu, việc theo dõi màn hình đếm ngược và luật chơi "Đúng cộng - Sai trừ" cũng khiến tôi cảm nhận rõ áp lực đè nặng lên các đội. 
-- Chứng kiến những pha lật ngược thế cờ ngoạn mục nhờ sự điềm tĩnh ở những câu hỏi cuối cùng thực sự rất cảm xúc.
+- Dù không trực tiếp thi đấu, việc theo dõi 2 đội chịu chung một đồng hồ đếm ngược và luật chơi "Đúng cộng - Sai trừ" cũng khiến tôi cảm nhận rõ áp lực đè nặng lên các thí sinh. 
+- Khoảnh khắc hệ thống lật mở đáp án của cả 2 đội cùng một lúc thực sự rất hồi hộp và cảm xúc.
 
 #### Học hỏi từ chiến thuật của người xuất sắc
 - Nhìn cách các đội mạnh phản ứng với đề bài dài ngoẵng chỉ trong vài giây giúp tôi nhận ra lỗ hổng trong cách đọc hiểu của bản thân.
-- Hiểu được rằng, việc nhớ tài liệu AWS là chưa đủ; khả năng phán đoán, phân tích logic và tâm lý thi đấu mới là chìa khóa phân định thắng thua.
+- Hiểu được rằng, việc nhớ tài liệu AWS là chưa đủ; khả năng phán đoán, phân tích logic để quản lý rủi ro trong tình huống bắt buộc mới là chìa khóa phân định thắng thua.
 
 #### Đánh giá lại năng lực bản thân
 - Việc "thi nhẩm" cùng các đội tuyển giúp tôi tự kiểm tra nhanh kiến thức của mình, đặc biệt là ở mảng Networking và Database.
