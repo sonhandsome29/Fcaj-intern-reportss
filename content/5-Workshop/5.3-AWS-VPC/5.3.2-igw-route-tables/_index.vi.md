@@ -1,82 +1,69 @@
 ---
 title : "Cấu hình Internet Gateway & Route Tables"
-date : 2024-01-01
+date : 2024-01-01 
 weight : 2
 chapter : false
 pre : " <b> 5.3.2. </b> "
 ---
 
-#### Tạo S3 bucket
+#### 1. Khởi tạo và gắn Internet Gateway (IGW)
 
-1. Đi đến S3 management console
-2. Trong Bucket console, chọn **Create bucket**
+Internet Gateway cho phép tài nguyên bên trong Public Subnet (máy chủ EC2) giao tiếp với Internet.
 
-![Create bucket](/images/5-Workshop/5.3-S3-vpc/create-bucket.png)
+**Step 1:** Trong thanh điều hướng bên trái của VPC Console, chọn **Internet Gateways** -> **Create internet gateway**.
+![IGW](/images/5-Workshop/5.3-AWS-VPC/igw.png)
 
-3. Trong Create bucket console
-+ Đặt tên bucket: chọn 1 tên mà không bị trùng trong phạm vi toàn cầu (gợi ý: lab\<số-lab\>\<tên-bạn\>)
+**Step 2:** Nhập **Name tag** là `pm_internet-gateway` và nhấn **Create internet gateway**.
+![Create IGW](/images/5-Workshop/5.3-AWS-VPC/create-gateway.png)
 
-![Bucket name](/images/5-Workshop/5.3-S3-vpc/bucket-name.png)
+**Step 3:** Sau khi tạo xong, IGW sẽ ở trạng thái *Detached*. Nhấn nút **Actions** -> **Attach to VPC**.
+![attach button](/images/5-Workshop/5.3-AWS-VPC/attach-to-vpc.png)
 
+**Step 4:** Chọn `pm_vpc` từ danh sách và nhấn **Attach internet gateway**.
 
-+ Giữ nguyên giá trị của các fields khác (default)
-+ Kéo chuột xuống và chọn **Create bucket**
+![Attach IGW](/images/5-Workshop/5.3-AWS-VPC/attach-igw.png)
+---
 
-![Create](/images/5-Workshop/5.3-S3-vpc/create-button.png)    
+#### 2. Khởi tạo Route Tables
 
-+ Tạo thành công S3 bucket
+Chúng ta cần tách biệt Route Table để đảm bảo Private Subnet không có đường dẫn ra Internet.
 
-![Success](/images/5-Workshop/5.3-S3-vpc/bucket-success.png)
+**Step 1:** Chọn **Route Tables** ở thanh điều hướng trái -> **Create route table**.
+![route table button](/images/5-Workshop/5.3-AWS-VPC/create-route-table-button.png)
 
-#### Kết nối với EC2 bằng session manager
+**Step 2:** Tạo lần lượt 3 Route Tables và liên kết tất cả với `pm_vpc`:
+*   `pm_public-route-table-1`    
+*   `pm_private-route-table-1`
+*   `pm_private-route-table-2`
+![create route table 1](/images/5-Workshop/5.3-AWS-VPC/create-route-table-button.png)
 
-+ Trong workshop này, bạn sẽ dùng AWS Session Manager để kết nối đến các EC2 instances. Session Manager là 1 tính năng trong dịch vụ Systems Manager được quản lý hoàn toàn bởi AWS. System manager cho phép bạn quản lý Amazon EC2 instances và các máy ảo on-premises (VMs)thông qua 1 browser-based shell. Session Manager cung cấp khả năng quản lý phiên bản an toàn và có thể kiểm tra mà không cần mở cổng vào, duy trì máy chủ bastion host hoặc quản lý khóa SSH.
+---
 
-+ First Cloud AI Journey [Lab](https://000058.awsstudygroup.com/1-introduce/) để hiểu sâu hơn về Session manager.
+#### 3. Cấu hình định tuyến Public & Gắn Subnet
 
-1. Trong AWS Management Console, gõ Systems Manager trong ô tìm kiếm và nhấn Enter:
+**Step 1:** Cấu hình định tuyến ra Internet cho Public Route Table:
+*   Chọn `pm_public-route-table-1` từ danh sách.
+*   Chuyển sang tab **Routes** ở nửa dưới màn hình -> Chọn **Edit routes**.
+   *   ![Select edit](/images/5-Workshop/5.3-AWS-VPC/select-edit-route-table.png)
 
-![system manager](/images/5-Workshop/5.3-S3-vpc/sm.png)
+*   Nhấn **Add route**. Điền Destination: `0.0.0.0/0`. Tại Target, chọn **Internet Gateway** và trỏ tới `pm_internet-gateway`.
+*   Nhấn **Save changes**.
 
-2. Từ **Systems Manager** menu, tìm **Node Management** ở thanh bên trái và chọn **Session Manager**:
+* ![Edit public route table](/images/5-Workshop/5.3-AWS-VPC/edit-route-table.png)
+*(Lưu ý: Chụp màn hình thao tác thêm route 0.0.0.0/0 trỏ tới IGW tương đương mốc 07:41:15)*
 
-![system manager](/images/5-Workshop/5.3-S3-vpc/sm1.png)
+**Step 2:** Gắn các Subnet vào đúng Route Table tương ứng:
+*   **Public RT:** Chọn `pm_public-route-table-1` -> Tab **Subnet associations** -> **Edit subnet associations** -> Tích chọn `pm_public-subnet-1` -> Save.
+*   ![edit subnet button](/images/5-Workshop/5.3-AWS-VPC/button-edit-subnet.png)
 
-3. Click Start Session, và chọn EC2 instance tên **Test-Gateway-Endpoint**. 
-{{% notice info %}}
-Phiên bản EC2 này đã chạy trong "VPC cloud" và sẽ được dùng để kiểm tra khả năng kết nối với Amazon S3 thông qua điểm cuối Cổng mà bạn vừa tạo (s3-gwe). {{% /notice %}}
+*   **Private RT 1:** Chọn `pm_private-route-table-1` -> Tab **Subnet associations** -> Tích chọn `pm_private-subnet-1` -> Save.
+*   **Private RT 2:** Chọn `pm_private-route-table-2` -> Tab **Subnet associations** -> Tích chọn `pm_private-subnet-2` -> Save.
+*   ![edit subnet](/images/5-Workshop/5.3-AWS-VPC/edit-subnet.png)
 
-![Start session](/images/5-Workshop/5.3-S3-vpc/start-session.png)
+---
 
-Session Manager sẽ mở browser tab mới với shell prompt: sh-4.2 $
+#### 4. Test & Validation (Kiểm tra kết quả)
 
-![Success](/images/5-Workshop/5.3-S3-vpc/start-session-success.png)
-
-Bạn đã bắt đầu phiên kết nối đến EC2 trong VPC Cloud thành công. Trong bước tiếp theo, chúng ta sẽ tạo một  S3 bucket và một tệp trong đó.
-#### Create a file and upload to s3 bucket
-
-1. Đổi về ssm-user's thư mục bằng lệnh "cd ~" 
-
-![Change user's dir](/images/5-Workshop/5.3-S3-vpc/cli1.png)
-
-2. Tạo 1 file để kiểm tra bằng lệnh "fallocate -l 1G testfile.xyz", 1 file tên "testfile.xyz" có kích thước 1GB sẽ được tạo.
-
-![Create file](/images/5-Workshop/5.3-S3-vpc/cli-file.png)
-
-3. Tải file mình vừa tạo lên S3 với lệnh "aws s3 cp testfile.xyz s3://your-bucket-name". Thay your-bucket-name bằng tên S3 bạn đã tạo.
-
-![Uploaded](/images/5-Workshop/5.3-S3-vpc/uploaded.png)
-
-Bạn đã tải thành công tệp lên bộ chứa S3 của mình. Bây giờ bạn có thể kết thúc session.
-
-#### Kiểm tra object trong S3 bucket
-
-1. Đi đến S3 console.  
-2. Click tên s3 bucket của bạn
-3. Trong Bucket console, bạn sẽ thấy tệp bạn đã tải lên S3 bucket của mình
-
-![Check S3](/images/5-Workshop/5.3-S3-vpc/check-s3-bucket.png)
-
-#### Tóm tắt
-
-Chúc mừng bạn đã hoàn thành truy cập S3 từ VPC. Trong phần này, bạn đã tạo gateway endpoint cho Amazon S3 và sử dụng AWS CLI để tải file lên. Quá trình tải lên hoạt động vì gateway endpoint cho phép giao tiếp với S3 mà không cần Internet gateway gắn vào "VPC Cloud". Điều này thể hiện chức năng của gateway endpoint như một đường dẫn an toàn đến S3 mà không cần đi qua pub    lic Internet.
+*   Tại danh sách **Route Tables**, kiểm tra tab **Routes** của `pm_private-route-table-1` và `pm-private-route-table-2`.
+*   **Kết quả mong đợi:** Các Private Route Tables này **KHÔNG** có route trỏ tới `0.0.0.0/0` (chỉ có route `local`). Điều này xác nhận database của chúng ta đã được cô lập an toàn khỏi Internet công cộng.
+*   ![check route](/images/5-Workshop/5.3-AWS-VPC/check-route.png)

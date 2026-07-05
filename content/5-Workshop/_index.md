@@ -23,8 +23,8 @@ We will break down and deploy each core component of the system onto specialized
 #### Table of Contents
 
 
-1. [Giới thiệu kiến trúc hệ thống](5.1-Overview/)
-2. [Chuẩn bị môi trường và Mã nguồn](5.2-Prerequisites/)
+1. [Giới thiệu kiến trúc hệ thống](5.1-Workshop-overview/)
+2. [Chuẩn bị môi trường và Mã nguồn](5.2-Prerequiste/)
 3. [Thiết lập Mạng lưới ảo (AWS VPC & Networking)](5.3-AWS-VPC/)
 4. [Triển khai Máy chủ Backend (AWS EC2)](5.4-AWS-EC2/)
 5. [Triển khai Cơ sở dữ liệu đám mây (AWS RDS)](5.5-AWS-RDS/)

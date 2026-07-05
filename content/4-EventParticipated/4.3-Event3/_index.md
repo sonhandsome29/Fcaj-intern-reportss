@@ -82,5 +82,5 @@ Attending **“AWS GameDay - The 8-Team Showdown”** as an audience member was 
 - It became clear that I need to dedicate more time to hands-on practice (Hands-on labs) rather than solely relying on theoretical study.
 
 #### Event Gallery
-* Add your photos here
+![Event 3](/images/4-Event/event-3.jpg)
 > Overall, observing the teams compete at AWS GameDay was a highly effective, practical "exam prep" session. The event provided me with a surge of motivation and a clear direction for conquering AWS certifications in the future.

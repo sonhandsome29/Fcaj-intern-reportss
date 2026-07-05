@@ -86,5 +86,5 @@ Tham gia sự kiện **“FCAJ Community Day”** là một trải nghiệm rấ
 - Bài học về việc luôn đặt câu hỏi **"Tại sao?" (Why)** giúp tôi tránh việc lập trình như một cái máy và tư duy sâu hơn về các quyết định kiến trúc.
 
 #### Một số hình ảnh khi tham gia sự kiện
-* Thêm các hình ảnh của các bạn tại đây
+![Event 1](/images/4-Event/event-1.png)
 > Tổng thể, sự kiện đã giúp tôi trang bị cả "vũ khí kỹ thuật" (Prompt Engineering, BMX) lẫn "áo giáp tâm lý" (Mindset học tập, Integrity), tạo hành trang vững chắc để tự tin hơn trong kỳ thực tập tại FCAJ Cloud Journey.

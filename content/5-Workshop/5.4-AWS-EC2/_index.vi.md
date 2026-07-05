@@ -6,18 +6,14 @@ chapter : false
 pre : " <b> 5.4. </b> "
 ---
 
-#### Tổng quan
+### Lưu trữ ứng dụng với Amazon EC2
 
-+ Trong phần này, bạn sẽ tạo một Interface Endpoint để truy cập Amazon S3 từ môi trường truyền thống mô phỏng. Interface Endpoint sẽ cho phép bạn định tuyến đến Amazon S3 qua kết nối VPN từ môi trường truyền thống mô phỏng của bạn.
+Trong phần này, chúng ta sẽ khởi chạy một máy chủ ảo **Amazon EC2 (Elastic Compute Cloud)** để làm môi trường chạy mã nguồn Backend (Node.js) cho dự án. Máy chủ này sẽ được đặt bên trong **Public Subnet** của VPC mà chúng ta vừa tạo, cho phép nó nhận các yêu cầu (requests) từ người dùng ngoài Internet thông qua cổng HTTP/HTTPS, đồng thời có thể giao tiếp an toàn với cơ sở dữ liệu ở Private Subnet.
 
-+ Tại sao nên sử dụng **Interface Endpoint**:
-    + Các Gateway endpoints chỉ hoạt động với các tài nguyên đang chạy trong VPC nơi chúng được tạo. Interface Endpoint  hoạt động với tài nguyên chạy trong VPC và cả tài nguyên chạy trong môi trường truyền thống. Khả năng kết nối từ môi trường truyền thống của bạn với aws cloud có thể được cung cấp bởi AWS Site-to-Site VPN hoặc AWS Direct Connect.
-    + Interface Endpoint cho phép bạn kết nối với các dịch vụ do AWS PrivateLink cung cấp. Các dịch vụ này bao gồm một số dịch vụ AWS, dịch vụ do các đối tác và khách hàng AWS lưu trữ trong VPC của riêng họ (gọi tắt là Dịch vụ PrivateLink endpoints) và các dịch vụ Đối tác AWS Marketplace. Đối với workshop này, chúng ta sẽ tập trung vào việc kết nối với Amazon S3.
-    
-![Interface endpoint architecture](/images/5-Workshop/5.4-S3-onprem/diagram3.png)
+![EC2 Architecture](/images/5-Workshop/5.4/ec2-architecture.png)
+*(Lưu ý: Chèn sơ đồ kiến trúc EC2 vào đây. Bạn có thể dùng Draw.io, lấy sơ đồ VPC ở phần trước và vẽ thêm icon EC2 vào bên trong khung Public Subnet).*
 
-#### Nội dung
+#### Nội dung (Content)
 
 - [Khởi chạy EC2 Instance & Security Group](5.4.1-launch-ec2/)
 - [Cài đặt Node.js & PM2 qua SSH](5.4.2-install-env/)
-
