@@ -1,58 +1,51 @@
 ---
-title : "Khởi chạy EC2 Instance & Security Group"
-date : 2024-01-01
+title : "Launch EC2"
+date : 2024-01-01 
 weight : 1
 chapter : false
-pre : " <b> 5.4.1 </b> "
+pre : " <b> 5.4.1. </b> "
 ---
 
-Để chuẩn bị cho phần này của workshop, bạn sẽ cần phải:
-+ Triển khai CloudFormation stack
-+ Sửa đổi bảng định tuyến VPC.
+### Khởi tạo máy chủ ảo
 
-Các thành phần này hoạt động cùng nhau để mô phỏng DNS forwarding và name resolution.
+Bước này hướng dẫn cách tạo một máy chủ EC2, gắn nó vào mạng VPC đã tạo ở bước 5.3 và cấu hình tường lửa (Security Group) đảm bảo nguyên tắc bảo mật.
 
-#### Triển khai CloudFormation stack
+**Step 1: Truy cập EC2 Dashboard**
+1. Đăng nhập vào AWS Management Console.
+2. Tìm kiếm **EC2** trên thanh tìm kiếm và chọn dịch vụ EC2.
+3. Nhấp vào nút **Launch instance**.
 
-Mẫu CloudFormation sẽ tạo các dịch vụ bổ sung để hỗ trợ mô phỏng môi trường truyền thống:
-+ Một Route 53 Private Hosted Zone lưu trữ các bản ghi Bí danh (Alias records) cho điểm cuối PrivateLink S3
-+ Một Route 53 Inbound Resolver endpoint cho phép "VPC Cloud" giải quyết các yêu cầu resolve DNS gửi đến Private Hosted Zone
-+ Một Route 53 Outbound Resolver endpoint cho phép "VPC On-prem" chuyển tiếp các yêu cầu DNS cho S3 sang "VPC Cloud"
+![Access EC2](/images/5-Workshop/5.4-AWS-EC2/access-ec2.png)
 
-![route 53 diagram](/images/5-Workshop/5.4-S3-onprem/route53.png)
+**Step 2: Cấu hình cơ bản**
+1. **Name:** Nhập tên cho máy chủ, ví dụ: `pm_ec2-backend`.
+2. **Application and OS Images (Amazon Machine Image):** Chọn **Amazon Linux**, version *Amazon Linux 2023 AMI* (hoặc Amazon Linux 2).
+3. **Instance type:** Chọn **t2.micro**.
 
-1. Click link sau để mở [AWS CloudFormation console](https://us-east-1.console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/quickcreate?templateURL=https://s3.amazonaws.com/reinvent-endpoints-builders-session/R53CF.yaml&stackName=PLOnpremSetup). Mẫu yêu cầu sẽ được tải sẵn vào menu. Chấp nhận tất cả mặc định và nhấp vào Tạo stack.
+![Config EC2 OS](/images/5-Workshop/5.4-AWS-EC2/config-os.png)
 
-![Create stack](/images/5-Workshop/5.4-S3-onprem/create-stack.png)
+**Step 3: Cấu hình Key pair**
+1. Ở mục **Key pair (login)**, chọn **Create new key pair**.
+2. Nhập tên Key pair name (ví dụ: `fcj-workshop-key`).
+3. Key pair type: **RSA**. Private key file format: **.pem** (nếu dùng Mac/Linux) hoặc **.ppk** (nếu dùng Windows/PuTTY).
+4. Nhấp **Create key pair** và lưu file này ở nơi an toàn trên máy tính của bạn.
 
-![Button](/images/5-Workshop/5.4-S3-onprem/create-stack-button.png)
+![Create Key Pair](/images/5-Workshop/5.4-AWS-EC2/create-key-pair.png)
 
-Có thể mất vài phút để triển khai stack hoàn tất. Bạn có thể tiếp tục với bước tiếp theo mà không cần đợi quá trình triển khai kết thúc.
+**Step 4: Cấu hình Mạng & Bảo mật**
+1. Ở mục **Network settings**, nhấp vào **Edit**.
+2. **VPC:** Chọn VPC mà bạn đã tạo ở phần 5.3.
+3. **Subnet:** Chọn một **Public Subnet** để máy chủ có thể truy cập được từ Internet (Cần thiết cho quá trình cài đặt).
+4. **Auto-assign public IP:** Đổi thành **Enable**.
+5. **Firewall (security groups):** Chọn **Create security group**.
+    * **Security group name:** `pm_ec2-sg`
 
-####  Cập nhật bảng định tuyến private on-premise 
-
-Workshop này sử dụng StrongSwan VPN chạy trên EC2 instance để mô phỏng khả năng kết nối giữa trung tâm dữ liệu truyền thống và môi trường cloud AWS. Hầu hết các thành phần bắt buộc đều được cung cấp trước khi bạn bắt đầu. Để hoàn tất cấu hình VPN, bạn sẽ sửa đổi bảng định tuyến "VPC on-prem" để hướng lưu lượng đến cloud đi qua StrongSwan VPN instance.
-
-1. Mở Amazon EC2 console 
-
-2. Chọn instance tên infra-vpngw-test. Từ Details tab, copy Instance ID và paste vào text editor của bạn để sử dụng ở những bước tiếp theo
-
-![ec2 id](/images/5-Workshop/5.4-S3-onprem/ec2-onprem-id.png)
-
-3. Đi đến VPC menu bằng cách gõ "VPC" vào Search box
-
-4. Click vào Route Tables, chọn RT Private On-prem route table, chọn Routes tab, và click Edit Routes.
-
-![rt](/images/5-Workshop/5.4-S3-onprem/rt.png)
-
-5. Click Add route.
-+ Destination: CIDR block của Cloud VPC
-+ Target: ID của infra-vpngw-test instance (bạn đã lưu lại ở bước trên)
-
-![add route](/images/5-Workshop/5.4-S3-onprem/add-route.png)
-
-6. Click Save changes
+![Config Security Group](/images/5-Workshop/5.4-AWS-EC2/config-sg.png)
 
 
+**Step 5: Khởi chạy**
+1. Phần **Configure storage** giữ nguyên mặc định là 8GB gp3.
+2. Kiểm tra lại thông tin ở khung **Summary** bên phải.
+3. Nhấp **Launch instance**. Chờ vài phút để trạng thái của máy chủ chuyển sang **Running**.
 
-
+![Launch Summary](/images/5-Workshop/5.4-AWS-EC2/launch-summary.png)

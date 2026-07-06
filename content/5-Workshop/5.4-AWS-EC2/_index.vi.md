@@ -1,19 +1,24 @@
 ---
-title : "Triển khai Máy chủ Backend (AWS EC2)"
+title : "Triển khai Backend (AWS EC2)"
 date : 2024-01-01 
 weight : 4
 chapter : false
 pre : " <b> 5.4. </b> "
 ---
 
-### Lưu trữ ứng dụng với Amazon EC2
+### Triển khai Backend trên AWS EC2
 
-Trong phần này, chúng ta sẽ khởi chạy một máy chủ ảo **Amazon EC2 (Elastic Compute Cloud)** để làm môi trường chạy mã nguồn Backend (Node.js) cho dự án. Máy chủ này sẽ được đặt bên trong **Public Subnet** của VPC mà chúng ta vừa tạo, cho phép nó nhận các yêu cầu (requests) từ người dùng ngoài Internet thông qua cổng HTTP/HTTPS, đồng thời có thể giao tiếp an toàn với cơ sở dữ liệu ở Private Subnet.
+Trong dự án này, hệ thống Backend (Node.js/Express) đóng vai trò xử lý logic nghiệp vụ và giao tiếp với cơ sở dữ liệu. Chúng ta sẽ sử dụng **Amazon Elastic Compute Cloud (Amazon EC2)** để làm máy chủ chạy ứng dụng này.
 
-![EC2 Architecture](/images/5-Workshop/5.4/ec2-architecture.png)
-*(Lưu ý: Chèn sơ đồ kiến trúc EC2 vào đây. Bạn có thể dùng Draw.io, lấy sơ đồ VPC ở phần trước và vẽ thêm icon EC2 vào bên trong khung Public Subnet).*
+![EC2 Architecture](/images/5-Workshop/5.4-AWS-EC2/ec2-architecture.png)
 
-#### Nội dung (Content)
+#### Lý do lựa chọn dịch vụ
+*   **Tính linh hoạt:** EC2 cung cấp quyền kiểm soát hoàn toàn (root access) đối với môi trường máy chủ, cho phép dễ dàng cài đặt Node.js, các thư viện cần thiết và cấu hình hệ thống theo đúng yêu cầu của framework.
+*   **Chi phí tối ưu:** Bằng cách sử dụng instance type `t2.micro` hoặc `t3.micro`, chúng ta có thể tận dụng AWS Free Tier, giúp tiết kiệm chi phí tối đa trong quá trình phát triển và làm workshop.
+*   **Khả năng tích hợp:** Dễ dàng nằm gọn trong kiến trúc VPC đã tạo, giao tiếp nội bộ an toàn với RDS và có thể đặt sau API Gateway.
 
-- [Khởi chạy EC2 Instance & Security Group](5.4.1-launch-ec2/)
-- [Cài đặt Node.js & PM2 qua SSH](5.4.2-install-env/)
+#### Bố cục phần này
+1. **Launch EC2 Instance:** Khởi tạo máy chủ ảo với các cấu hình mạng và bảo mật (Security Group) phù hợp.
+2. **Install Environment:** Truy cập vào máy chủ, cài đặt môi trường Node.js và tải mã nguồn Backend.
+
+*(Lưu ý: Theo phương pháp triển khai tăng dần (Iterative), sau khi tải mã nguồn, Backend sẽ chưa thể chạy ngay lập tức vì chúng ta cần khởi tạo Cơ sở dữ liệu RDS ở bước tiếp theo).*
