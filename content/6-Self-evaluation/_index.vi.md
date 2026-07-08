@@ -1,35 +1,43 @@
 ---
 title: "Tự đánh giá"
-date: 2026-07-01
+date: 2026-07-10
 weight: 6
 chapter: false
 pre: " <b> 6. </b> "
 ---
 
-Trong suốt thời gian thực tập tại **FCAJ Cloud Journey** từ **[ngày bắt đầu]** đến **[ngày kết thúc]**, tôi đã có cơ hội học hỏi, rèn luyện và áp dụng kiến thức đã được trang bị tại trường vào môi trường làm việc thực tế[cite: 2].  
-Tôi đã tham gia **quá trình triển khai hệ thống Cloud, AI và viết tài liệu hướng dẫn (workshop)**, qua đó cải thiện kỹ năng **phân tích lỗi, xử lý vấn đề (debug), viết báo cáo kỹ thuật và làm việc nhóm**[cite: 2].  
+Trong thời gian thực tập tại **FCAJ Cloud Journey** từ **04/05/2026** đến **10/07/2026**, tôi có cơ hội đi từ việc học các workshop nền tảng trên AWS đến triển khai một project full-stack thực tế. Điều tôi học được không chỉ là thao tác với dịch vụ cloud, mà còn là cách biến kiến thức rời rạc thành một hệ thống hoàn chỉnh có thể chạy được, public được và trình bày được bằng tài liệu rõ ràng.
 
-Về tác phong, tôi luôn cố gắng hoàn thành tốt nhiệm vụ, tuân thủ nội quy, và tích cực trao đổi với đồng nghiệp để nâng cao hiệu quả công việc[cite: 2].
+### Những điểm tôi làm tốt
 
-Để phản ánh một cách khách quan quá trình thực tập, tôi xin tự đánh giá bản thân dựa trên các tiêu chí dưới đây:
+- Tôi tiếp thu khá nhanh các kiến thức nền tảng như IAM, VPC, EC2, RDS, S3, Cognito và biết cách nối chúng lại thành một flow triển khai thực tế.
+- Tôi duy trì được tiến độ học và làm project khá đều, đặc biệt ở các giai đoạn cần vừa code vừa cấu hình hạ tầng.
+- Tôi chủ động tự đọc tài liệu, tự dò lỗi và thử nhiều cách trước khi nhờ hỗ trợ, nhờ đó khả năng debug cải thiện rõ rệt.
+- Tôi hoàn thành được cả phần kỹ thuật lẫn phần viết workshop/report, đây là phần giúp tôi rèn tính cẩn thận và khả năng trình bày.
 
-| STT | Tiêu chí                            | Mô tả                                                                                            | Tốt | Khá | Trung bình |
-| --- | ----------------------------------- | ------------------------------------------------------------------------------------------------ | --- | --- | ---------- |
-| 1   | **Kiến thức và kỹ năng chuyên môn** | Hiểu biết về ngành, áp dụng kiến thức vào thực tế, kỹ năng sử dụng công cụ, chất lượng công việc | ✅   | ☐   | ☐          |
-| 2   | **Khả năng học hỏi**                | Tiếp thu kiến thức mới, học hỏi nhanh                                                            | ✅   | ☐   | ☐          |
-| 3   | **Chủ động**                        | Tự tìm hiểu, nhận nhiệm vụ mà không chờ chỉ dẫn                                                  | ☐   | ✅   | ☐          |
-| 4   | **Tinh thần trách nhiệm**           | Hoàn thành công việc đúng hạn, đảm bảo chất lượng                                                | ✅   | ☐   | ☐          |
-| 5   | **Kỷ luật**                         | Tuân thủ giờ giấc, nội quy, quy trình làm việc                                                   | ✅   | ☐   | ☐          |
-| 6   | **Tính cầu tiến**                   | Sẵn sàng nhận feedback và cải thiện bản thân                                                     | ✅   | ☐   | ☐          |
-| 7   | **Giao tiếp**                       | Trình bày ý tưởng, báo cáo công việc rõ ràng                                                     | ☐   | ✅   | ☐          |
-| 8   | **Hợp tác nhóm**                    | Làm việc hiệu quả với đồng nghiệp, tham gia nhóm                                                 | ✅   | ☐   | ☐          |
-| 9   | **Ứng xử chuyên nghiệp**            | Tôn trọng đồng nghiệp, đối tác, môi trường làm việc                                              | ✅   | ☐   | ☐          |
-| 10  | **Tư duy giải quyết vấn đề**        | Nhận diện vấn đề, đề xuất giải pháp, sáng tạo                                                    | ☐   | ✅   | ☐          |
-| 11  | **Đóng góp vào dự án/tổ chức**      | Hiệu quả công việc, sáng kiến cải tiến, ghi nhận từ team                                         | ✅   | ☐   | ☐          |
-| 12  | **Tổng thể**                        | Đánh giá chung về toàn bộ quá trình thực tập                                                     | ✅   | ☐   | ☐          |
+### Tự đánh giá theo nhóm năng lực
 
-### Cần cải thiện
+| Nhóm năng lực | Mức tự đánh giá | Ghi chú ngắn |
+| --- | --- | --- |
+| Kiến thức kỹ thuật nền tảng | Tốt | Nắm được các dịch vụ AWS cốt lõi và hiểu được vai trò của từng thành phần trong project |
+| Khả năng học nhanh | Tốt | Có thể đọc workshop, thử nghiệm và áp dụng lại vào project trong thời gian ngắn |
+| Tính chủ động | Khá | Chủ động làm việc và tự tìm hướng xử lý, nhưng đôi lúc vẫn cần thêm thời gian để chốt giải pháp tối ưu |
+| Kỹ năng giao tiếp | Khá | Báo cáo tiến độ được, nhưng vẫn cần tự tin hơn khi trình bày ý tưởng trong nhóm |
+| Kỹ năng viết tài liệu | Tốt | Hoàn thiện được worklog, workshop và self-evaluation theo hướng rõ ràng, có cấu trúc |
+| Tư duy giải quyết vấn đề | Khá | Đã cải thiện nhiều trong lúc xử lý deploy, security group, API Gateway và Cognito |
 
-* Rèn luyện sự tự tin và mạnh dạn hơn trong việc trình bày ý tưởng cá nhân ở các buổi họp chung.
-* Cải thiện tốc độ tra cứu log và nâng cao tư duy giải quyết vấn đề để xử lý các công việc một cách tối ưu hơn.
-* Mở rộng thêm kiến thức chuyên sâu về các dịch vụ Cloud mới ngoài những phần đã được giao trong workshop để đáp ứng tốt hơn các yêu cầu thực tế.
+### Điều tôi cải thiện rõ nhất
+
+- Tôi bớt phụ thuộc vào việc làm theo từng bước có sẵn và bắt đầu hiểu bản chất của từng cấu hình.
+- Tôi quen hơn với việc kiểm tra log, so sánh luồng local và cloud, và truy ra nguyên nhân lỗi theo từng lớp.
+- Tôi có góc nhìn thực tế hơn về việc triển khai một sản phẩm, vì chỉ code xong là chưa đủ, còn cần tính đến bảo mật, môi trường và chi phí.
+
+### Những điểm tôi vẫn cần rèn thêm
+
+- Tôi cần tự tin hơn khi trao đổi giải pháp kỹ thuật trước nhóm, nhất là khi phải bảo vệ lựa chọn của mình.
+- Tôi muốn cải thiện thêm tốc độ đọc log và khoanh vùng lỗi, để thời gian xử lý sự cố ngắn hơn.
+- Tôi cần học sâu hơn về CI/CD, monitoring và best practices production để các lần triển khai sau bài bản hơn.
+
+### Đánh giá chung
+
+Nếu tự nhìn lại toàn bộ kỳ thực tập, tôi đánh giá đây là giai đoạn giúp tôi trưởng thành rõ rệt cả về kỹ thuật lẫn tác phong làm việc. Tôi chưa phải là người làm nhanh nhất, nhưng tôi có tinh thần học nghiêm túc, bám việc tới cùng và biết cách biến phần mình đã học thành sản phẩm và tài liệu có thể trình bày được.

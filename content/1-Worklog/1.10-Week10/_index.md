@@ -1,5 +1,5 @@
 ---
-title: "Week 10 Worklog"
+title: "Week 10 - Automation, public deploy, and wrap-up"
 date: 2026-06-30
 weight: 10
 chapter: false

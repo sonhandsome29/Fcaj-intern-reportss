@@ -1,6 +1,6 @@
 ---
 title : "Dọn dẹp tài nguyên"
-date : 2026-07-07 
+date : 2026-07-10
 weight : 9
 chapter : false
 pre : " <b> 5.9. </b> "
@@ -8,30 +8,86 @@ pre : " <b> 5.9. </b> "
 
 #### Dọn dẹp tài nguyên
 
-Xin chúc mừng bạn đã hoàn thành xong lab này!
-Trong lab này, bạn đã học về các mô hình kiến trúc để truy cập Amazon S3 mà không sử dụng Public Internet.
+Sau khi hoàn thành workshop triển khai hệ thống Project Management trên AWS, bạn nên dọn dẹp toàn bộ tài nguyên để tránh phát sinh chi phí không cần thiết. Thứ tự xóa dưới đây được sắp xếp theo hướng an toàn, hạn chế lỗi phụ thuộc giữa các dịch vụ.
 
-+ Bằng cách tạo Gateway endpoint, bạn đã cho phép giao tiếp trực tiếp giữa các tài nguyên EC2 và Amazon S3, mà không đi qua Internet Gateway.
-Bằng cách tạo Interface endpoint, bạn đã mở rộng kết nối S3 đến các tài nguyên chạy trên trung tâm dữ liệu trên chỗ của bạn thông qua AWS Site-to-Site VPN hoặc Direct Connect.
+#### Thứ tự khuyến nghị
 
-#### Dọn dẹp
-1. Điều hướng đến Hosted Zones trên phía trái của bảng điều khiển Route 53. Nhấp vào tên của  s3.us-east-1.amazonaws.com zone. Nhấp vào Delete và xác nhận việc xóa bằng cách nhập từ khóa "delete".
+1. **Gỡ frontend trên AWS Amplify**
 
-![hosted zone](/images/5-Workshop/5.6-Cleanup/delete-zone.png)
+   Mở **AWS Amplify** và chọn app đã deploy. Nếu không cần giữ môi trường demo nữa, hãy xóa branch đang dùng hoặc xóa toàn bộ app hosting.
 
-2. Disassociate Route 53 Resolver Rule - myS3Rule from "VPC Onprem" and Delete it. 
+2. **Xóa cấu hình xác thực trên Amazon Cognito**
 
-![hosted zone](/images/5-Workshop/5.6-Cleanup/vpc.png)
+   Vào **Amazon Cognito** và kiểm tra:
 
-4.Mở console của CloudFormation và xóa hai stack CloudFormation mà bạn đã tạo cho bài thực hành này:
-+ PLOnpremSetup
-+ PLCloudSetup
+   - User Pool đã tạo cho project
+   - App Client đi kèm
+   - Các user test không còn cần dùng
 
-![delete stack](/images/5-Workshop/5.6-Cleanup/delete-stack.png)
+   Nếu không cần tái sử dụng, hãy xóa toàn bộ User Pool để tránh giữ cấu hình xác thực dư thừa.
 
-5. Xóa các S3 bucket
+3. **Xóa API trên Amazon API Gateway**
 
-+ Mở bảng điều khiển S3
-+ Chọn bucket chúng ta đã tạo cho lab, nhấp chuột và xác nhận là empty. Nhấp Delete và xác nhận delete.
-+ 
-![delete s3](/images/5-Workshop/5.6-Cleanup/delete-s3.png)
+   Vào **API Gateway** và xóa:
+
+   - HTTP API hoặc REST API đã tạo
+   - Stage deploy liên quan
+   - Authorizer nếu được tạo riêng cho bài lab
+
+4. **Xóa Lambda Trigger**
+
+   Nếu bạn đã tạo Lambda để xử lý post-confirmation hoặc trigger khác từ Cognito, hãy:
+
+   - Gỡ trigger ra khỏi User Pool
+   - Xóa function Lambda nếu không dùng nữa
+
+5. **Dừng và xóa EC2 backend**
+
+   Vào **EC2 Console** và thực hiện:
+
+   - Stop instance để kiểm tra lần cuối
+   - Terminate instance backend nếu không cần giữ
+   - Xóa Elastic IP nếu có gán riêng
+   - Xóa key pair trên AWS nếu không còn sử dụng
+
+6. **Xóa cơ sở dữ liệu Amazon RDS**
+
+   Vào **RDS Console**, chọn database của project và quyết định:
+
+   - **Giữ final snapshot** nếu muốn sao lưu dữ liệu trước khi kết thúc
+   - **Không giữ snapshot** nếu đây chỉ là môi trường lab và không còn nhu cầu phục hồi
+
+   Sau đó xóa database instance.
+
+7. **Xóa S3 bucket lưu hình ảnh**
+
+   Vào **Amazon S3**:
+
+   - Xóa toàn bộ object trong bucket
+   - Xác nhận bucket rỗng
+   - Xóa bucket chứa ảnh hoặc static assets của project
+
+8. **Xóa Security Group và tài nguyên mạng phụ trợ**
+
+   Sau khi EC2 và RDS đã bị xóa, bạn có thể xóa tiếp:
+
+   - Security Group dùng riêng cho EC2
+   - Security Group dùng riêng cho RDS
+   - DB subnet group nếu tạo riêng
+
+9. **Xóa subnet, route table, internet gateway và VPC**
+
+   Nếu VPC này chỉ phục vụ cho workshop, hãy xóa theo thứ tự:
+
+   - Subnet
+   - Route table tùy chỉnh
+   - Internet Gateway (detach trước, rồi delete)
+   - VPC
+
+#### Ghi chú cuối
+
+Trước khi xóa hoàn toàn tài nguyên, hãy chắc chắn rằng bạn đã lưu lại:
+
+- Source code cuối cùng
+- Ảnh chụp màn hình để viết báo cáo
+- Link demo hoặc thông tin cấu hình quan trọng nếu cần đối chiếu sau này

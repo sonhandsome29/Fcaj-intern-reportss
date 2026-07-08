@@ -1,5 +1,5 @@
 ---
-title: "Week 3 Worklog"
+title: "Week 3 - VPC and managed database setup"
 date: 2026-05-24
 weight: 3
 chapter: false

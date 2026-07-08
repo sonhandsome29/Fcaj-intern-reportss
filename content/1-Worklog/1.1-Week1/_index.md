@@ -1,5 +1,5 @@
 ---
-title: "Week 1 Worklog"
+title: "Week 1 - AWS environment setup"
 date: 2026-05-10
 weight: 1
 chapter: false

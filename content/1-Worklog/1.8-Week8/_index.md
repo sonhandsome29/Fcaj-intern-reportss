@@ -1,5 +1,5 @@
 ---
-title: "Week 8 Worklog"
+title: "Week 8 - Deploying the backend on EC2"
 date: 2026-06-28
 weight: 8
 chapter: false

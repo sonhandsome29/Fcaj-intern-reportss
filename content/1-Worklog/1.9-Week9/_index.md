@@ -1,5 +1,5 @@
 ---
-title: "Week 9 Worklog"
+title: "Week 9 - S3, Cognito, and user flow"
 date: 2026-06-30
 weight: 9
 chapter: false

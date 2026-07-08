@@ -1,5 +1,5 @@
 ---
-title: "Week 4 Worklog"
+title: "Week 4 - Observability and operations mindset"
 date: 2026-05-31
 weight: 4
 chapter: false

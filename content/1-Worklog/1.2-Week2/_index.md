@@ -1,5 +1,5 @@
 ---
-title: "Week 2 Worklog"
+title: "Week 2 - EC2, CLI, and the first deployment"
 date: 2026-05-17
 weight: 2
 chapter: false

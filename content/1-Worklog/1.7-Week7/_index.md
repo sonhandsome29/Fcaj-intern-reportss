@@ -1,5 +1,5 @@
 ---
-title: "Week 7 Worklog"
+title: "Week 7 - Frontend and local integration"
 date: 2026-06-21
 weight: 7
 chapter: false

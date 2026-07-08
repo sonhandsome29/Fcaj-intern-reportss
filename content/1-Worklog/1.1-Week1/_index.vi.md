@@ -1,26 +1,28 @@
 ---
-title: "Worklog Tuần 1"
-date: 2026-05-10
+title: "Tuần 1 - Làm quen môi trường AWS"
+date: 2026-05-08
 weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
 ---
-### Mục tiêu tuần 1:
-* Nắm vững các bước khởi tạo tài khoản và quản lý chi phí trên AWS.
-* Làm quen với các công cụ hỗ trợ và môi trường phát triển đám mây.
-* Thiết lập bảo mật cơ bản và quản lý quyền truy cập với AWS IAM.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
-| :--- | :--- | :--- | :--- | :--- |
-| 2 | - Tìm hiểu và khởi tạo tài khoản: **Create new AWS Account**.<br>- Quản lý chi phí sử dụng dịch vụ với **AWS Budgets**. | 04/05/2026 | 04/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 3 | - Tìm hiểu cách yêu cầu hỗ trợ qua **AWS Support**.<br>- Làm quen môi trường lập trình trực tuyến: **Use the Cloud IDE in the browser with AWS Cloud9**. | 05/05/2026 | 05/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 4 | - Quản lý truy cập: **Access Management with AWS Identity and Access Management (AWS IAM)**.<br>- Tìm hiểu về Users, Groups và Policies. | 06/05/2026 | 06/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 5 | - **Thực hành:**<br>&emsp; + Khởi tạo IAM User có quyền Admin.<br>&emsp; + Thiết lập cảnh báo chi phí AWS Budgets.<br>&emsp; + Khởi tạo môi trường Cloud9. | 07/05/2026 | 07/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 6 | - Ôn tập kiến thức tuần 1 và họp nhóm tổng kết tiến độ. | 08/05/2026 | 08/05/2026 | |
+### Trọng tâm trong tuần
+Tuần đầu tiên tôi dành thời gian để làm quen với nhịp học, chuẩn bị tài khoản AWS cá nhân và thiết lập các nền tảng cơ bản để tránh lỗi chi phí, lỗi quyền truy cập và lỗi môi trường về sau.
 
-### Kết quả đạt được tuần 1:
-* Đã tạo thành công AWS Account và thiết lập cảnh báo chi phí an toàn với AWS Budgets.
-* Hiểu cách liên hệ AWS Support khi gặp sự cố kỹ thuật.
-* Phân quyền an toàn với AWS IAM, áp dụng nguyên tắc đặc quyền tối thiểu (Least Privilege).
-* Có khả năng sử dụng AWS Cloud9 làm môi trường phát triển code trực tiếp trên trình duyệt.
+### Công việc đã thực hiện
+1. Tạo tài khoản AWS cá nhân và rà soát lại phần bảo mật cơ bản như MFA, thông tin billing và region mặc định.
+2. Thiết lập AWS Budgets để theo dõi mức chi phí phát sinh ngay từ đầu thay vì chờ đến cuối quá trình thực hành.
+3. Tìm hiểu cách sử dụng AWS Support và Cloud9 để quen với cách học qua workshop có tài liệu hướng dẫn chi tiết.
+4. Ôn lại IAM theo góc nhìn thực hành, tập trung vào user, group, policy và nguyên tắc least privilege.
+
+### Kết quả đạt được
+- Tôi đã có môi trường AWS sẵn sàng để bắt đầu các bài lab tiếp theo.
+- Tôi hiểu rõ hơn cách tự bảo vệ tài khoản và kiểm soát chi phí khi học trên cloud.
+- Tôi chủ động hơn trong việc đọc workshop, ghi chú và tự kiểm tra lại từng bước cấu hình.
+
+### Workshop tham khảo
+- [Creating Your First AWS Account](https://000001.awsstudygroup.com/)
+- [Managing Costs with AWS Budgets](https://000007.awsstudygroup.com/)
+- [Getting Help with AWS Support](https://000009.awsstudygroup.com/)
+- [Access Management with AWS Identity and Access Management (IAM)](https://000002.awsstudygroup.com/)
+- [Cloud Development with AWS Cloud9](https://000049.awsstudygroup.com/)

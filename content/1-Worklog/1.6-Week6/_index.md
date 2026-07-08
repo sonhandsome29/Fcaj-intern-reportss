@@ -1,5 +1,5 @@
 ---
-title: "Week 6 Worklog"
+title: "Week 6 - Backend APIs and infrastructure"
 date: 2026-06-14
 weight: 6
 chapter: false
