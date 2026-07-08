@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 6. </b> "
 ---
 
-During my internship at **FCAJ Cloud Journey** from **May 4, 2026** to **July 23, 2026**, I progressed from studying AWS foundation workshops to deploying a real full-stack project. This period helped me move beyond learning individual cloud services and toward understanding how those services work together as a complete, deployable, and maintainable system.
+During my internship at **FCAJ Cloud Journey** from **May 4, 2026** to **July 10, 2026**, I progressed from studying AWS foundation workshops to deploying a real full-stack project. What mattered most to me was not only learning individual services, but also understanding how to connect them into a working system that could be deployed, secured, documented, and presented clearly.
 
 ### Areas I handled well
 
