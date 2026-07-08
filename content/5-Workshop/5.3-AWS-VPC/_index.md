@@ -1,6 +1,6 @@
 ---
 title : "Set up Virtual Network (AWS VPC)"
-date : 2024-01-01 
+date : 2026-07-04 
 weight : 3
 chapter : false
 pre : " <b> 5.3. </b> "
