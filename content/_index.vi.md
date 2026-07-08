@@ -25,7 +25,7 @@ chapter: false
 
 &emsp; **Thời gian thực tập:** Từ ngày 04/05/2026 đến ngày 23/07/2026
 
-![Ảnh đại diện của bạn](/images/avatar.jpg)
+![Ảnh đại diện của bạn](/images/Thái dương sơn.jpg)
 
 
 
