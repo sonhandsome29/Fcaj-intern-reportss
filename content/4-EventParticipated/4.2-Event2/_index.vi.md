@@ -8,72 +8,124 @@ pre: " <b> 4.2. </b> "
 
 # Bài thu hoạch “FCAJ Community Day (23-05-2026)”
 
-### Mục Đích Của Sự Kiện
+### Mục đích của sự kiện
 
-- Cập nhật định hướng nghề nghiệp và xu hướng việc làm trong kỷ nguyên AI.
-- Hiểu rõ về tầm quan trọng của ngữ cảnh (context) khi làm việc với các công cụ AI.
-- Tìm hiểu giải pháp phân tích dữ liệu kinh doanh với Amazon Q Business.
-- Nắm bắt cơ chế tối ưu chi phí và bảo mật hạ tầng web với AWS CloudFront.
-- Khám phá phương pháp phát triển phần mềm và xây dựng hệ thống Multi-Agent cấp doanh nghiệp (Enterprise Grade).
+Buổi Community Day lần này tập trung mạnh hơn vào câu chuyện nghề nghiệp trong kỷ nguyên AI, cách làm việc với LLM có kiểm soát, cũng như cách xây hệ thống AI ở mức doanh nghiệp. Ngoài ra, sự kiện còn mở rộng sang bài toán dữ liệu, chi phí hạ tầng và tư duy phát triển sản phẩm.
 
-### Danh Sách Diễn Giả
+Các mục tiêu chính gồm:
+
+- Cập nhật góc nhìn nghề nghiệp trong bối cảnh AI phát triển rất nhanh
+- Làm rõ vai trò của context khi sử dụng công cụ AI
+- Tìm hiểu khả năng phân tích dữ liệu với Amazon Q Business
+- Hiểu thêm về tối ưu chi phí và bảo vệ hạ tầng bằng AWS CloudFront
+- Tiếp cận mô hình Multi-Agent ở cấp độ enterprise
+
+### Diễn giả tham gia
 
 - **Anh Nguyễn Gia Hưng** - Solution Architect AWS Việt Nam, Founder FCAJ
 - **Anh Tịnh Trương** - Platform Engineer tại Got It
 - **Anh Hải Anh** - Kỹ sư tại Pacific Việt Nam
 - **Anh Nguyễn Hữu Thịnh** - DevOps Engineer
-- **Team UTM Morpo (Uyển, Thảo, Mạch)** - Nhóm thắng giải cuộc thi Hackathon
+- **Team UTM Morpo (Uyển, Thảo, Mạch)** - Nhóm thắng giải Hackathon
 
-### Nội Dung Nổi Bật
+### Nội dung nổi bật
 
-#### Định Hướng Nghề Nghiệp Kỷ Nguyên AI
-- **Tình hình thị trường:** Khi chi phí phát triển phần mềm rẻ đi nhờ AI, nhu cầu xây dựng sản phẩm sẽ tăng đột biến. Điều này tạo ra một luồng công việc mới: Sửa chữa, duy trì và vận hành (Platform Engineering) những hệ thống được sinh ra hàng loạt từ AI.
-- **Yêu cầu đối với kỹ sư:** Bằng đại học và kiến thức nền tảng vẫn mang tính quyết định. Tuy nhiên, để cạnh tranh, ứng viên cần có thêm kiến thức nghiệp vụ (Business Context) và phải có "Sản phẩm thực tế" thay vì chỉ làm các demo đơn thuần.
+#### 1. Định hướng nghề nghiệp trong thời đại AI
 
-#### Tối Ưu Hóa LLM & Vấn Đề Context
-- **Tầm quan trọng của Context:** AI cần hiểu ngữ cảnh cụ thể (domain của doanh nghiệp, coding style của team) để không sinh ra các đoạn code hoặc luồng xử lý vô dụng.
-- **Hội chứng "Internet Puller":** Cảnh báo về thói quen copy/paste code hoặc kéo các công cụ, thư viện trên mạng về một cách bừa bãi mà không hiểu bản chất. Điều này dẫn đến phình to source code và mất kiểm soát khi dự án lớn lên.
-- **Tính bất định của LLM:** Mặc dù đã cấu hình độ sáng tạo thấp (Temperature = 0), AI đôi khi vẫn trả về các output khác nhau. Do đó, cần phải test sâu và thiết kế hệ thống luôn sẵn sàng xử lý các output bị lỗi format.
+Một trong những ý chính của sự kiện là khi AI làm giảm chi phí tạo phần mềm, số lượng sản phẩm được xây dựng sẽ tăng nhanh. Điều đó không có nghĩa nhu cầu kỹ sư giảm đi, mà ngược lại, các vai trò như platform engineering, vận hành, bảo trì và tối ưu hệ thống sẽ càng quan trọng hơn.
 
-#### Giải Pháp Dữ Liệu & Hạ Tầng Cloud
-- **Amazon Q Business:** Trình diễn khả năng kết nối Agent từ các nguồn dữ liệu (như Excel) để tự động phân tích và tạo dashboard trực quan (BI) hỗ trợ quản trị mà không cần viết code.
-- **AWS CloudFront:** Giới thiệu mô hình tính giá Flat Rate thay thế cho Pay-as-you-go, giúp doanh nghiệp tránh rủi ro "Bill Spike" (đội giá) do bị tấn công DDoS. Cập nhật thêm các tính năng hỗ trợ HTTP/3, tự động nén dữ liệu và sử dụng VBC Origin để bảo mật hạ tầng.
+Từ góc nhìn đó, diễn giả nhấn mạnh:
 
-#### Xây Dựng Hệ Thống Multi-Agent Cho Doanh Nghiệp
-- **Kiến trúc Multi-Agent:** Đối với các bài toán phức tạp (như đánh giá tín dụng doanh nghiệp), cần chia nhỏ bài toán. Mỗi Agent sẽ đảm nhận một vai trò chuyên biệt (Financial Analyst, Market Researcher) dưới sự điều phối của một Orchestrator. Tránh gộp chung vào Single-Agent vì sẽ làm quá tải giới hạn Context.
-- **Bảo mật và Tuân thủ:** Việc tích hợp Tool (như MCP) tùy tiện trong môi trường doanh nghiệp là cực kỳ nguy hiểm. Cần thiết lập ranh giới an toàn (Guardrails), phân quyền rõ ràng và ghi log (Audit) mọi quyết định do AI đưa ra để đảm bảo tính tuân thủ pháp lý và rủi ro (Compliance & Security).
+- Bằng cấp và kiến thức nền vẫn rất quan trọng
+- Chỉ biết kỹ thuật là chưa đủ, cần hiểu thêm business context
+- Sinh viên nên cố gắng tạo ra sản phẩm thực tế thay vì chỉ dừng ở demo
 
-### Những Gì Học Được
+#### 2. Context và giới hạn của LLM
 
-#### Tư Duy Thiết Kế & Kỹ Thuật
-- Nắm được cách tối ưu hóa LLM không chỉ qua prompt mà còn qua việc cung cấp ngữ cảnh đúng và kiểm soát sự bất định của mô hình.
-- Hiểu được nguyên lý thiết kế hệ thống Multi-Agent an toàn, đáp ứng tiêu chuẩn khắt khe của doanh nghiệp (Enterprise Grade) thay vì chỉ làm các công cụ AI thử nghiệm.
-- Mở rộng kiến thức về hạ tầng Cloud, cách CloudFront bảo vệ server gốc và tối ưu hóa chi phí truyền tải.
+Phần này giúp tôi nhận ra rằng AI chỉ cho kết quả tốt khi nó được đặt vào đúng ngữ cảnh. Nếu không có context về domain, coding style hay yêu cầu nghiệp vụ, AI rất dễ sinh ra code vô ích hoặc khiến hệ thống phình to theo hướng khó kiểm soát.
 
-#### Chiến Lược Công Việc & Mindset
-- **ROI & Business Value:** Xây dựng hệ thống phần mềm không chỉ để "chạy được" mà phải an toàn, đáng tin cậy và giải quyết đúng bài toán kinh doanh. Luôn có góc nhìn về hiệu quả đầu tư (ROI).
-- **Tư duy Vận hành:** Nhận ra giá trị của việc viết mã hạ tầng (Infrastructure as Code - Terraform) để quản lý hạ tầng minh bạch, lưu vết các lần cập nhật.
-- **Kỷ luật làm Product:** Tránh tham lam tính năng ("Feature Creep"), tập trung hoàn thiện Core Value cốt lõi nhất khi nguồn lực và thời gian có hạn (bài học từ việc thi Hackathon).
+Một khái niệm đáng chú ý là “Internet Puller”, tức thói quen sao chép công cụ, thư viện hoặc đoạn code từ nhiều nguồn mà không hiểu bản chất. Đây là điều rất nguy hiểm khi dự án phát triển lớn hơn.
 
-### Ứng Dụng Vào Công Việc
+Ngoài ra, diễn giả cũng nhắc đến tính không hoàn toàn ổn định của LLM: ngay cả khi để temperature thấp, output vẫn có thể khác nhau. Vì vậy, hệ thống dùng AI phải luôn chuẩn bị sẵn cho tình huống output sai format hoặc lệch mong đợi.
 
-- **Áp dụng AI có chắt lọc:** Chấm dứt thói quen "Internet Puller", thay vào đó tự review và chọn lọc các prompt, công cụ AI thực sự phù hợp với ngữ cảnh dự án thực tế của công ty.
-- **Nâng cấp bảo mật khi dùng AI:** Kiểm duyệt kỹ đầu vào và đầu ra của LLM trước khi tích hợp vào hệ thống để đảm bảo không rò rỉ dữ liệu nhạy cảm của khách hàng.
-- **Thực hành Cloud Architecture:** Chủ động tìm hiểu sâu hơn về kiến trúc Serverless, áp dụng Terraform trong việc triển khai hạ tầng cơ bản thay vì thao tác tay trên console.
-- **Lấy nghiệp vụ làm trọng tâm:** Mỗi khi đề xuất tích hợp tính năng mới hoặc ứng dụng AI, luôn bắt đầu bằng việc phân tích nghiệp vụ (Business Context) và giá trị thực tế mang lại cho tổ chức.
+#### 3. Dữ liệu kinh doanh và hạ tầng cloud
 
-### Trải nghiệm trong event
+Tôi thấy phần trình bày về **Amazon Q Business** khá thú vị vì nó cho thấy AI không chỉ dành cho code. Khi được kết nối với nguồn dữ liệu như Excel hoặc kho tài liệu doanh nghiệp, agent có thể hỗ trợ phân tích và dựng dashboard phục vụ quản trị mà không cần viết quá nhiều logic thủ công.
 
-Buổi **FCAJ Community Day** ngày 23/05/2026 mang lại những góc nhìn cực kỳ sắc bén về khoảng cách giữa việc "làm demo" và "làm sản phẩm thực tế cho doanh nghiệp". Một số trải nghiệm đáng chú ý:
+Với **AWS CloudFront**, nội dung chia sẻ tập trung vào góc nhìn thực tế của doanh nghiệp:
 
-#### Góc nhìn thực tế từ chuyên gia
-- Rất ấn tượng với phần phân tích về xu hướng việc làm, giúp tôi định vị lại bản thân: phải tạo ra sản phẩm hoàn chỉnh và hiểu sâu business thay vì chỉ trau dồi bề nổi của kỹ thuật lập trình.
-- Lần đầu tiên tôi hiểu được sự khắc nghiệt trong việc tuân thủ bảo mật cấp doanh nghiệp, nơi yếu tố "Security" quan trọng hơn việc chạy đua áp dụng công nghệ AI mới nhất.
+- Tối ưu chi phí tốt hơn với mô hình phù hợp
+- Hạn chế rủi ro bill spike
+- Tăng hiệu quả phân phối nội dung
+- Hỗ trợ bảo mật tốt hơn cho origin
 
-#### Những bài học không có trên sách vở
-- Bài học về sự tham lam tính năng khi giới hạn nguồn lực (từ nhóm thắng giải Hackathon) giúp tôi nhìn nhận lại cách làm đồ án cá nhân hiệu quả hơn.
-- Việc một hệ thống dù có AI tiên tiến đến đâu cũng phải được thiết kế để xử lý cho những lúc nó "trả lời sai" (hallucinate) đã thay đổi hoàn toàn cách tôi nghĩ về việc thiết kế hệ thống phần mềm tích hợp trí tuệ nhân tạo.
+#### 4. Thiết kế hệ thống Multi-Agent cấp doanh nghiệp
+
+Phần Multi-Agent là nội dung tôi thấy có chiều sâu nhất. Diễn giả nhấn mạnh rằng với những bài toán phức tạp, không nên nhồi toàn bộ xử lý vào một agent duy nhất. Thay vào đó, nên chia nhỏ theo chuyên môn: một agent phụ trách tài chính, một agent lo nghiên cứu thị trường, một agent điều phối tổng, v.v.
+
+Đi kèm với đó là yêu cầu rất chặt về:
+
+- Guardrails
+- Phân quyền rõ ràng
+- Audit log cho các quyết định AI đưa ra
+- Tuân thủ bảo mật và pháp lý
+
+### Những gì tôi học được
+
+#### Về tư duy kỹ thuật
+
+- Tối ưu LLM không chỉ nằm ở prompt mà còn nằm ở cách cung cấp context và kiểm soát rủi ro đầu ra
+- Multi-Agent chỉ thực sự hữu ích khi có thiết kế vai trò và ranh giới trách nhiệm rõ
+- Hạ tầng cloud cần được nhìn đồng thời ở ba góc: hiệu năng, bảo mật và chi phí
+
+#### Về tư duy công việc
+
+- Sản phẩm tốt không chỉ là sản phẩm chạy được, mà phải giải quyết đúng bài toán kinh doanh
+- Viết hạ tầng bằng mã và quản lý thay đổi bài bản là tư duy rất quan trọng nếu muốn làm hệ thống nghiêm túc
+- Khi thời gian và nguồn lực có hạn, cần ưu tiên core value thay vì cố nhồi quá nhiều tính năng
+
+### Ứng dụng vào công việc
+
+Sau sự kiện, tôi rút ra một số hướng áp dụng cụ thể:
+
+- Dùng AI có chọn lọc hơn, tránh thói quen copy-paste thiếu kiểm chứng
+- Kiểm tra kỹ đầu vào và đầu ra của LLM trước khi tích hợp vào hệ thống
+- Học sâu hơn về serverless architecture và hạ tầng dạng Infrastructure as Code
+- Khi đề xuất tính năng mới, luôn bắt đầu bằng business context và giá trị thực tế mang lại
+
+### Trải nghiệm tại sự kiện
+
+Buổi Community Day ngày 23/05/2026 cho tôi cảm giác rất khác so với các buổi chia sẻ công nghệ thông thường, vì nó không chỉ nói về “công cụ nào mới”, mà còn chỉ rõ khoảng cách giữa một bản demo và một sản phẩm đủ tiêu chuẩn doanh nghiệp. Tôi đặc biệt ấn tượng với cách các diễn giả đặt yếu tố bảo mật, compliance và business value lên trước cả sự hào nhoáng của AI.
+
+Một bài học đáng nhớ khác là câu chuyện về feature creep từ nhóm thắng giải Hackathon. Điều đó khiến tôi nhận ra rằng đôi khi làm ít hơn nhưng đúng trọng tâm lại hiệu quả hơn nhiều so với cố gắng ôm quá nhiều thứ cùng lúc.
 
 #### Một số hình ảnh khi tham gia sự kiện
 ![Event 2](/images/4-Event/event-2.jpg)
-> Sự kiện đã trang bị cho tôi một tư duy thiết kế hệ thống vững vàng, luôn đặt yếu tố bảo mật, nghiệp vụ và khả năng vận hành lên hàng đầu – một hành trang tuyệt vời để bước tiếp trong chặng đường thực tập tại FCAJ.
+
+### Ảnh minh chứng tham gia Event 2
+
+![Email xác nhận đăng ký Event 2](/images/4-Event/event2/registration-email.png)
+*Email xác nhận đăng ký tham gia FCAJ Community Day ngày 23/05/2026.*
+
+![Vé QR tham gia Event 2](/images/4-Event/event2/ticket-qr.png)
+*Mã QR check-in sự kiện tại Bitexco Financial Tower.*
+
+![Không gian sự kiện Event 2](/images/4-Event/event2/event-room.png)
+*Toàn cảnh khu vực tổ chức và người tham dự trước giờ bắt đầu chương trình.*
+
+![Ảnh người tham dự Event 2](/images/4-Event/event2/audience-photo.png)
+*Không khí theo dõi phần trình bày tại sự kiện.*
+
+![Slide Proposed Deployment Approach](/images/4-Event/event2/deployment-approach-slide.png)
+*Minh họa nội dung chia sẻ về hướng triển khai hệ thống ở mức enterprise.*
+
+![Slide Basic Deployment Flow](/images/4-Event/event2/deployment-flow-slide.png)
+*Sơ đồ flow triển khai cơ bản được trình bày trong workshop.*
+
+![Slide Workshop Exercises](/images/4-Event/event2/workshop-exercises-slide.png)
+*Nội dung các bài tập thực hành đi kèm trong buổi chia sẻ.*
+
+![Ghi chú whiteboard tại Event 2](/images/4-Event/event2/whiteboard-note.png)
+*Một số từ khóa trọng tâm được nhấn mạnh trong phần thảo luận: Security, Reliability, Scalable.*
+
+> Sau sự kiện này, tôi có góc nhìn rõ hơn về cách xây dựng hệ thống AI theo hướng thực tế và bền vững hơn, đặc biệt là khi bước vào môi trường doanh nghiệp hoặc các dự án có yêu cầu vận hành thật.

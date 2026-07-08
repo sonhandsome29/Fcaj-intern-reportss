@@ -6,31 +6,20 @@ chapter: false
 pre: " <b> 4. </b> "
 ---
 
-During my internship, I participated in 3 events. Each event was a memorable experience filled with new, interesting, and useful knowledge, along with wonderful gifts and great moments.
+During my internship, I participated in **two notable events** organized by the FCAJ Cloud Journey community. Each event offered a different kind of value: one focused more on learning mindset and career orientation, while the other explored AI, system architecture, and enterprise thinking in greater depth.
+
+This section provides a short overview of the two events I actually attended before the detailed reflections in the child pages.
 
 ### [Event 1](4.1-Event1/)
-&emsp;**Event Name:** FCAJ Community Day (09-05-2026)
-
-&emsp;**Time:** 09:00 AM, May 09, 2026
-
-&emsp;**Location:** Offline Meetup - FCAJ Cloud Journey Community Event
-
-&emsp;**Role:** Attendee
+**Event Name:** FCAJ Community Day (May 09, 2026)  
+**Time:** 09:00 AM, May 09, 2026  
+**Location:** Offline Meetup - FCAJ Cloud Journey community event  
+**Role:** Attendee  
+**Focus:** Learning motivation, Prompt Engineering, professional mindset, and the BMX Method
 
 ### [Event 2](4.2-Event2/)
-&emsp;**Event Name:** FCAJ Community Day (23-05-2026)
-
-&emsp;**Time:** 09:00 AM, May 23, 2026
-
-&emsp;**Location:** Offline Meetup - FCAJ Cloud Journey Community Event
-
-&emsp;**Role:** Attendee
-
-### [Event 3](4.3-Event3/)
-&emsp;**Event Name:** AWS GameDay - The 8-Team Showdown (20-06-2026)
-
-&emsp;**Time:** 09:00 AM, June 20, 2026
-
-&emsp;**Location:** Offline Meetup - FCAJ Cloud Journey Community Event
-
-&emsp;**Role:** Attendee
+**Event Name:** FCAJ Community Day (May 23, 2026)  
+**Time:** 09:00 AM, May 23, 2026  
+**Location:** Offline Meetup - FCAJ Cloud Journey community event  
+**Role:** Attendee  
+**Focus:** Career direction in the AI era, Amazon Q Business, CloudFront, and enterprise multi-agent design
