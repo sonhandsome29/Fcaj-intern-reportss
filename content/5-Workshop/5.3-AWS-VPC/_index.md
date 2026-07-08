@@ -1,18 +1,21 @@
 ---
-title : "Set up Virtual Network (AWS VPC)"
-date : 2026-07-04 
+title : "Set Up the Virtual Network (AWS VPC)"
+date : 2026-07-04
 weight : 3
 chapter : false
 pre : " <b> 5.3. </b> "
 ---
 
-#### Using Gateway endpoint
+In this section, we manually create an **Amazon VPC** to provide a secure networking foundation for the project. Instead of using the default VPC, we build a simple layered network architecture that includes:
 
-In this section, you will create **a Gateway eendpoint** to access **Amazon S3** from **an EC2 instance**. **The Gateway endpoint** will allow upload an object to S3 buckets without using **the Public Internet**. To create an endpoint, you must specify the VPC in which you want to create the endpoint, and the service (in this case, S3) to which you want to establish the connection.
+* one **public subnet** for the backend EC2 instance
+* two **private subnets** for the RDS database
+* an **Internet Gateway**
+* separate **Route Tables** for public and private traffic
 
-![overview](/images/5-Workshop/5.3-S3-vpc/diagram2.png)
+This design helps keep the database isolated from the public internet while still allowing the backend server to be deployed and managed easily.
 
-#### Content
+#### Contents
 
-- [Create gateway endpoint](3.1-create-gwe/)
-- [Test gateway endpoint](3.2-test-gwe/)
+1. [Create the VPC and Subnets](5.3.1-create-vpc-subnets/)
+2. [Configure the Internet Gateway and Route Tables](5.3.2-igw-route-tables/)
