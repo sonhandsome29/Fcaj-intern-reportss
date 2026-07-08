@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 6. </b> "
 ---
 
-Trong thời gian thực tập tại **FCAJ Cloud Journey** từ **04/05/2026** đến **10/07/2026**, tôi có cơ hội đi từ việc học các workshop nền tảng trên AWS đến triển khai một project full-stack thực tế. Điều tôi học được không chỉ là thao tác với dịch vụ cloud, mà còn là cách biến kiến thức rời rạc thành một hệ thống hoàn chỉnh có thể chạy được, public được và trình bày được bằng tài liệu rõ ràng.
+Trong thời gian thực tập tại **FCAJ Cloud Journey** từ **04/05/2026** đến **23/07/2026**, tôi có cơ hội đi từ việc học các workshop nền tảng trên AWS đến triển khai một project full-stack thực tế. Quá trình này không chỉ giúp tôi làm quen với từng dịch vụ cloud riêng lẻ, mà còn giúp tôi hiểu rõ hơn cách kết nối chúng thành một hệ thống hoàn chỉnh có thể triển khai, vận hành và trình bày một cách rõ ràng.
 
 ### Những điểm tôi thực hiện tốt
 
