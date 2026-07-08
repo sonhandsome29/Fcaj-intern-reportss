@@ -1,6 +1,6 @@
 ---
 title : "Clean up"
-date : 2026-07-10
+date : 2026-07-23
 weight : 9
 chapter : false
 pre : " <b> 5.9. </b> "
@@ -8,17 +8,17 @@ pre : " <b> 5.9. </b> "
 
 #### Clean up resources
 
-After finishing the Project Management deployment workshop, you should remove the AWS resources to avoid unnecessary charges. The sequence below is arranged to reduce dependency errors while deleting the environment.
+After completing the Project Management deployment workshop, it is important to remove the AWS resources to avoid unnecessary charges. The deletion process should be done in a controlled order, starting from the application layer and moving inward to the infrastructure layer, so that service dependencies do not cause avoidable errors.
 
 #### Recommended order
 
 1. **Remove the frontend deployment on AWS Amplify**
 
-   Open **AWS Amplify** and select the deployed app. If you no longer need the demo environment, delete the active branch or remove the entire hosting app.
+   First, open **AWS Amplify** and review the deployed application. If the demo environment is no longer needed, delete the active branch or remove the entire hosting application.
 
 2. **Delete the Amazon Cognito configuration**
 
-   In **Amazon Cognito**, review and remove:
+   Next, go to **Amazon Cognito** and review the following resources:
 
    - The User Pool created for this project
    - The related App Client
@@ -26,7 +26,7 @@ After finishing the Project Management deployment workshop, you should remove th
 
 3. **Delete the API in Amazon API Gateway**
 
-   Open **API Gateway** and remove:
+   After that, open **API Gateway** and remove:
 
    - The HTTP API or REST API created for the project
    - The deployed stage
@@ -34,14 +34,14 @@ After finishing the Project Management deployment workshop, you should remove th
 
 4. **Delete the Lambda trigger**
 
-   If you created a Lambda function for post-confirmation or another Cognito trigger:
+   If a Lambda function was created for post-confirmation or another Cognito trigger, make sure to:
 
    - Detach the trigger from the User Pool
    - Delete the Lambda function if it is no longer required
 
 5. **Stop and terminate the EC2 backend**
 
-   In **EC2 Console**:
+   In **EC2 Console**, perform the following steps:
 
    - Stop the instance for a final check
    - Terminate the backend instance when you are done
@@ -50,16 +50,16 @@ After finishing the Project Management deployment workshop, you should remove th
 
 6. **Delete the Amazon RDS database**
 
-   In **RDS Console**, decide whether you want to keep a final snapshot:
+   For **Amazon RDS**, decide first whether the database needs to be preserved before deletion:
 
    - Keep a snapshot if you may need the data later
    - Skip the snapshot if this was only a lab environment
 
-   Then delete the database instance.
+   Once the appropriate option has been chosen, delete the database instance.
 
 7. **Delete the S3 bucket used for images**
 
-   In **Amazon S3**:
+   In **Amazon S3**, clean up the bucket in this order:
 
    - Delete all objects inside the bucket
    - Confirm that the bucket is empty
@@ -67,7 +67,7 @@ After finishing the Project Management deployment workshop, you should remove th
 
 8. **Delete security groups and supporting network resources**
 
-   After EC2 and RDS are removed, you can delete:
+   After EC2 and RDS have been removed, continue with the related network resources:
 
    - The EC2 security group
    - The RDS security group
@@ -75,7 +75,7 @@ After finishing the Project Management deployment workshop, you should remove th
 
 9. **Delete the subnets, route tables, internet gateway, and VPC**
 
-   If the VPC was created only for this workshop, remove it in this order:
+   If the VPC was created only for this workshop, remove it in the following order:
 
    - Subnets
    - Custom route tables
@@ -84,7 +84,7 @@ After finishing the Project Management deployment workshop, you should remove th
 
 #### Final note
 
-Before deleting everything, make sure you have already saved:
+Before removing everything completely, make sure the following items have already been saved:
 
 - The final source code
 - Screenshots used in the report

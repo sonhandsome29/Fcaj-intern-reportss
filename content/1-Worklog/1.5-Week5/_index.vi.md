@@ -6,21 +6,21 @@ chapter: false
 pre: " <b> 1.5. </b> "
 ---
 
-### Trọng tâm trong tuần
-Tuần này đánh dấu giai đoạn chuyển từ học workshop sang áp dụng cho project thực tế. Tôi cùng nhóm chốt hướng làm Project Management App và bắt đầu biến ý tưởng thành sơ đồ kiến trúc và mô hình dữ liệu.
+### Trọng tâm công việc
+Tuần thứ năm là giai đoạn chuyển từ học workshop sang áp dụng trực tiếp vào project thực tế. Trọng tâm chính là xác định hướng triển khai Project Management App và hoàn thiện mô hình dữ liệu ban đầu.
 
-### Công việc đã thực hiện
+### Công việc thực hiện
 1. Họp nhóm để thống nhất phạm vi tính năng, tech stack và cách chia việc giữa frontend, backend và cloud.
 2. Phác thảo kiến trúc tổng thể gồm Next.js, Node.js/Express, RDS, EC2, API Gateway, S3, Cognito và Amplify.
 3. Thiết kế schema dữ liệu với Prisma cho các thực thể chính như user, project, task, team và assignment.
 4. Chuẩn bị dữ liệu mẫu để kiểm thử sớm các màn hình và API ngay từ giai đoạn đầu.
 
 ### Kết quả đạt được
-- Tôi hiểu rõ hơn cách chuyển yêu cầu bài toán thành thành phần kỹ thuật cụ thể.
-- Schema dữ liệu được chốt sớm giúp giai đoạn code phía sau mượt hơn và ít sửa cấu trúc.
-- Đây là tuần tôi bắt đầu thấy sự liên kết giữa workshop nền tảng và project capstone của nhóm.
+- Hoàn thành phần định hướng kỹ thuật và chia vai trò cơ bản cho project.
+- Chốt được mô hình dữ liệu tương đối rõ ràng để hỗ trợ các bước code tiếp theo.
+- Nhìn thấy rõ hơn mối liên hệ giữa kiến thức nền tảng AWS và bài toán triển khai sản phẩm thực tế.
 
-### Workshop tham khảo
+### Tài liệu tham khảo
 - [Explore AWS Services Overview](https://cloudjourney.awsstudygroup.com/1-explore/)
 - [Modernize the application Overview](https://cloudjourney.awsstudygroup.com/4-modernize/)
 - [Building Microservices](https://000052.awsstudygroup.com/)

@@ -1,6 +1,6 @@
 ---
 title: "Week 10 - Automation, public deploy, and wrap-up"
-date: 2026-06-30
+date: 2026-07-23
 weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
@@ -18,7 +18,7 @@ pre: " <b> 1.10. </b> "
 | Tue | - Configure Backend security: Attach **Cognito Authorizer** to API Gateway.<br>- Adjust RTK Query on the Frontend to include JWT tokens in the Headers of API requests. | 07/07/2026 | 07/07/2026 | <https://cloudjourney.awsstudygroup.com/> |
 | Wed | - Configure continuous deployment (CI/CD) for the Next.js application on **AWS Amplify Hosting**.<br>- Connect Amplify with GitHub and configure Production environment variables. | 08/07/2026 | 08/07/2026 | <https://cloudjourney.awsstudygroup.com/> |
 | Thu | - Comprehensively test the entire system from Frontend (Amplify) -> API Gateway -> Backend (EC2) -> Database (RDS).<br>- Optimize the user interface. | 09/07/2026 | 09/07/2026 | |
-| Fri | - Finalize source code (Push code to Git). | 10/07/2026 | 10/07/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| Fri | - Finalize documentation, supporting evidence, and the final report package. | 23/07/2026 | 23/07/2026 | <https://cloudjourney.awsstudygroup.com/> |
 
 ### Week 10 Achievements:
 * Fully automated the User data synchronization process between Cognito and PostgreSQL via Lambda Triggers.

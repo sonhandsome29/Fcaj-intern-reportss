@@ -6,7 +6,9 @@ chapter: false
 pre: " <b> 1. </b> "
 ---
 
-This section summarizes my 10-week internship progress from AWS fundamentals to deploying a full project-management application on AWS. Each weekly entry includes direct reference links from AWS Study Group workshops that supported the implementation.
+This section records my **10-week internship journey**, from **May 4, 2026** to **July 23, 2026**. Each entry summarizes the weekly focus, the implementation progress, and the supporting AWS Study Group workshops that informed the work.
+
+The goal of this section is to present the internship timeline in a structured way, showing how foundational AWS learning was gradually translated into a complete project deployment and supporting documentation.
 
 **Week 1:** [AWS environment setup and account preparation](1.1-week1/)
 

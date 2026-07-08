@@ -6,7 +6,9 @@ chapter: false
 pre: " <b> 1. </b> "
 ---
 
-Phần này ghi lại tiến độ 10 tuần thực tập của tôi theo hướng bám sát quá trình học AWS, triển khai project thực tế và hoàn thiện tài liệu. Ở mỗi tuần, tôi đính kèm thêm các workshop tham khảo từ AWS Study Group để thể hiện rõ nguồn học tập và phần kiến thức đã áp dụng.
+Phần này ghi lại quá trình thực tập trong **10 tuần**, bắt đầu từ **04/05/2026** và kết thúc vào **23/07/2026**. Nội dung được sắp xếp theo từng tuần để thể hiện rõ tiến độ học tập, quá trình triển khai project trên AWS và phần tài liệu đã hoàn thiện trong suốt kỳ thực tập.
+
+Ở mỗi mục, tôi đính kèm thêm các workshop tham khảo từ AWS Study Group nhằm làm rõ nguồn kiến thức đã sử dụng và mối liên hệ giữa phần học lý thuyết với phần triển khai thực tế.
 
 **Tuần 1:** [Làm quen môi trường AWS và chuẩn bị tài khoản](1.1-week1/)
 
