@@ -65,4 +65,4 @@ Các rule tối thiểu nên có:
 
 Sau khi tạo thành công, AWS sẽ hiển thị mã instance và thông báo khởi tạo hoàn tất.
 
-![EC2 launch success](/images/5-Workshop/5.4-AWS-EC2/launch-instance-success.jpg)
+![EC2 launch success](/images/5-Workshop/5.4-AWS-EC2/z8007993502305_c977416dc91cb6dd7fa401b0e8741e0e.jpg)

@@ -17,7 +17,7 @@ pre : " <b> 5.7.1. </b> "
 
 Sau khi tạo thành công, bucket sẽ xuất hiện trong danh sách.
 
-![S3 bucket created](/images/5-Workshop/5.7-AWS-S3/bucket-created.jpg)
+![S3 bucket created](/images/5-Workshop/5.7-AWS-S3/z8014903805881_ad0eece18580fb6b88234fd493898503.jpg)
 
 #### 2. Tải object lên bucket
 
@@ -29,7 +29,7 @@ Upload các tệp cần dùng cho giao diện như:
 
 Khi mở trang chi tiết object, AWS sẽ hiển thị URL tương ứng.
 
-![S3 object properties](/images/5-Workshop/5.7-AWS-S3/object-properties.jpg)
+![S3 object properties](/images/5-Workshop/5.7-AWS-S3/z8014913860501_46e832754f7daa970e9eb8d14be759d3.jpg)
 
 #### 3. Phân quyền đọc ảnh
 

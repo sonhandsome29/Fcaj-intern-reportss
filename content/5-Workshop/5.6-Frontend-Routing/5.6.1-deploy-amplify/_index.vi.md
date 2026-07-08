@@ -53,14 +53,14 @@ NEXT_PUBLIC_COGNITO_USER_POOL_CLIENT_ID=45qj7u3s4el2ggvjec6oqnfq6d
 
 Sau khi build hoàn tất, Amplify sẽ cấp cho bạn một URL public.
 
-![Amplify overview](/images/5-Workshop/5.6-Frontend-Routing/amplify-overview.jpg)
+![Amplify overview](/images/5-Workshop/5.6-Frontend-Routing/z8018624951197_552794d116a7747abbb6451cac611889.jpg)
 
 #### 5. Xác minh giao diện đã hoạt động
 
 Khi truy cập URL được deploy, trang Dashboard hiển thị thành công với biểu đồ và danh sách task.
 
-![Dashboard home](/images/5-Workshop/5.6-Frontend-Routing/dashboard-home.jpg)
+![Dashboard home](/images/5-Workshop/5.6-Frontend-Routing/z8015064749679_f863e1da662ef87d8fe7e782dccbd205.jpg)
 
 Ngoài trang Home, các route con như trang Priority cũng hoạt động bình thường.
 
-![Priority page](/images/5-Workshop/5.6-Frontend-Routing/priority-page.jpg)
+![Priority page](/images/5-Workshop/5.6-Frontend-Routing/z8018816674221_4ba98393e460b77ee8591a7c240df558.jpg)

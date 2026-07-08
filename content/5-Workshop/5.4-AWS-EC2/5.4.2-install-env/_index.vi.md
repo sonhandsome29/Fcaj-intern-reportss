@@ -25,7 +25,7 @@ source ~/.bashrc
 nvm use node
 ```
 
-![SSH and install environment](/images/5-Workshop/5.4-AWS-EC2/ssh-install-env.jpg)
+![SSH and install environment](/images/5-Workshop/5.4-AWS-EC2/z8014660664709_d852d8aca4a9c0b88cf677c434a0945a.jpg)
 
 #### 2. Cài dependency và clone repo
 

@@ -37,7 +37,7 @@ npm run seed
 
 Ảnh dưới đây cho thấy quá trình generate Prisma Client, migrate database và seed dữ liệu mẫu thành công.
 
-![Prisma migrate seed](/images/5-Workshop/5.4-AWS-EC2/prisma-migrate-seed.jpg)
+![Prisma migrate seed](/images/5-Workshop/5.4-AWS-EC2/z8014660603531_d2b6b06a6c4d6ae71694dc71875c548e.jpg)
 
 #### 4. Cài PM2 và chỉnh lệnh start
 
@@ -51,7 +51,7 @@ pm2 save
 pm2 status
 ```
 
-![PM2 save status](/images/5-Workshop/5.4-AWS-EC2/pm2-status-save.jpg)
+![PM2 save status](/images/5-Workshop/5.4-AWS-EC2/z8014660603511_f1b5c8eff652021b8de8c74d269871b6.jpg)
 
 #### 5. Kiểm tra backend bằng localhost
 
@@ -63,4 +63,4 @@ curl http://localhost:8000/projects
 
 Nếu trả về danh sách project JSON, backend đã kết nối thành công với RDS.
 
-![Curl localhost projects](/images/5-Workshop/5.4-AWS-EC2/curl-localhost-api.jpg)
+![Curl localhost projects](/images/5-Workshop/5.4-AWS-EC2/z8014714331396_4de9416dc5804df52ec5d66b097a4b8b.jpg)

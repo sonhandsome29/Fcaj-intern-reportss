@@ -17,7 +17,7 @@ Trong danh sách Security Groups, xác nhận đã có:
 * `pm-ec2-sg`: dùng cho backend EC2
 * `pm-rds-sg`: dùng cho RDS
 
-![Security groups](/images/5-Workshop/5.5-AWS-RDS/security-groups.jpg)
+![Security groups](/images/5-Workshop/5.5-AWS-RDS/z8007929031359_78ceac77af5643bd71396e152859972c.jpg)
 
 #### 2. Cấu hình inbound rule cho `pm-rds-sg`
 

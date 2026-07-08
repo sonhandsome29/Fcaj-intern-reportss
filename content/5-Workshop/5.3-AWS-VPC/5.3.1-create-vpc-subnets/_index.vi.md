@@ -53,6 +53,10 @@ Hệ thống của chúng ta yêu cầu 3 Subnets: 1 Public Subnet cho EC2 và 2
 
 **Step 4:** Cuộn xuống cuối trang và nhấn **Create subnet**.
 
+Sau khi hoàn tất, AWS sẽ hiển thị màn hình workflow xác nhận VPC, các subnet, route table và internet gateway đã được tạo thành công.
+
+![Create VPC workflow success](/images/5-Workshop/5.3-AWS-VPC/z8007889978504_abaf388742a623b682b46742d309f93a.jpg)
+
 ---
 
 #### 3. Test & Validation (Kiểm tra kết quả)

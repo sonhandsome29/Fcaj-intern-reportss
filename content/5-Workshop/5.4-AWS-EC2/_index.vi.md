@@ -16,7 +16,7 @@ EC2 phù hợp với bài toán này vì:
 * **Chi phí thấp**: có thể dùng `t2.micro` hoặc `t3.micro` trong phạm vi Free Tier.
 * **Dễ tích hợp**: backend trên EC2 có thể kết nối nội bộ tới RDS và được đặt sau API Gateway để cung cấp HTTPS cho frontend.
 
-![EC2 launched successfully](/images/5-Workshop/5.4-AWS-EC2/launch-instance-success.jpg)
+![EC2 launched successfully](/images/5-Workshop/5.4-AWS-EC2/z8007993502305_c977416dc91cb6dd7fa401b0e8741e0e.jpg)
 
 #### Nội dung
 

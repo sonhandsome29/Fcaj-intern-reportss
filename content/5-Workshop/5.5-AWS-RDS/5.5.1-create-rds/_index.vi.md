@@ -39,11 +39,11 @@ Khi tạo database, có thể dùng cấu hình tương tự:
 
 Sau khi nhấn **Create database**, trạng thái ban đầu sẽ là **Creating**.
 
-![RDS creating](/images/5-Workshop/5.5-AWS-RDS/rds-creating.jpg)
+![RDS creating](/images/5-Workshop/5.5-AWS-RDS/z8007964995120_4ae5126884b8b2c034b6aae6e646f5b3.jpg)
 
 Khi hoàn tất, trạng thái chuyển sang **Available**.
 
-![RDS available](/images/5-Workshop/5.5-AWS-RDS/rds-available.jpg)
+![RDS available](/images/5-Workshop/5.5-AWS-RDS/z8007996839089_2b855aa77f72204f2e7ff7d3ca5e659b.jpg)
 
 #### 5. Lưu lại endpoint
 
