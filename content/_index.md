@@ -9,11 +9,11 @@ chapter: false
 # Internship Report
 
 ### Student Information:
-&emsp; **Full Name:** Nguyen Mong Khang
+&emsp; **Full Name:** Thai Duong Son
 
-&emsp; **Phone Number:** 0989760603 
+&emsp; **Phone Number:** 0886825716 
 
-&emsp; **Email:** khangnguyen6324@gmail.com
+&emsp; **Email:** sonhandsome29@gmail.com
 
 &emsp; **University:** Ho Chi Minh City University of Technology
 

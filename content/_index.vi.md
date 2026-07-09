@@ -7,11 +7,11 @@ chapter: false
 
 # Báo cáo thực tập
 ### Thông tin sinh viên:
-&emsp; **Họ và tên:** Nguyễn Mộng Khang
+&emsp; **Họ và tên:** Thái Dương Sơn
 
-&emsp; **Số điện thoại:** 0989760603
+&emsp; **Số điện thoại:** 0886825716
 
-&emsp; **Email:** khangnguyen6324@gmail.com
+&emsp; **Email:** sonhandsome29@gmail.com
 
 &emsp; **Trường:** Đại học Công nghệ TP.HCM
 
@@ -25,7 +25,7 @@ chapter: false
 
 &emsp; **Thời gian thực tập:** Từ ngày 04/05/2026 đến ngày 08/07/2026
 
-![Ảnh đại diện của bạn](/images/avatar.jpg)
+![Ảnh đại diện của bạn](/images/Thái dương sơn.jpg)
 
 
 
