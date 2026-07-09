@@ -1,12 +1,12 @@
 ---
 title: "Self-Assessment"
-date: 2026-07-23
+date: 2026-07-08
 weight: 6
 chapter: false
 pre: " <b> 6. </b> "
 ---
 
-During my internship at **FCAJ Cloud Journey** from **May 4, 2026** to **July 23, 2026**, I progressed from studying AWS foundation workshops to deploying a real full-stack project. This period helped me move beyond learning individual cloud services and toward understanding how those services work together as a complete, deployable, and maintainable system.
+During my internship at **FCAJ Cloud Journey** from **May 4, 2026** to **July 8, 2026**, I progressed from studying AWS foundation workshops to deploying a real full-stack project. This period helped me move beyond learning individual cloud services and toward understanding how those services work together as a complete, deployable, and maintainable system.
 
 ### Areas I handled well
 

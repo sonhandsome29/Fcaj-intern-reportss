@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 1. </b> "
 ---
 
-Phần này ghi lại quá trình thực tập trong **10 tuần**, bắt đầu từ **04/05/2026** và kết thúc vào **23/07/2026**. Nội dung được sắp xếp theo từng tuần để thể hiện rõ tiến độ học tập, quá trình triển khai project trên AWS và phần tài liệu đã hoàn thiện trong suốt kỳ thực tập.
+Phần này ghi lại quá trình thực tập trong **10 tuần**, bắt đầu từ **04/05/2026** và kết thúc vào **08/07/2026**. Nội dung được sắp xếp theo từng tuần để thể hiện rõ tiến độ học tập, quá trình triển khai project trên AWS và phần tài liệu đã hoàn thiện trong suốt kỳ thực tập.
 
 Ở mỗi mục, tôi đính kèm thêm các workshop tham khảo từ AWS Study Group nhằm làm rõ nguồn kiến thức đã sử dụng và mối liên hệ giữa phần học lý thuyết với phần triển khai thực tế.
 

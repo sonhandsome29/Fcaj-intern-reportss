@@ -1,12 +1,12 @@
 ---
 title: "Tự đánh giá"
-date: 2026-07-23
+date: 2026-07-08
 weight: 6
 chapter: false
 pre: " <b> 6. </b> "
 ---
 
-Trong thời gian thực tập tại **FCAJ Cloud Journey** từ **04/05/2026** đến **23/07/2026**, tôi có cơ hội đi từ việc học các workshop nền tảng trên AWS đến triển khai một project full-stack thực tế. Quá trình này không chỉ giúp tôi làm quen với từng dịch vụ cloud riêng lẻ, mà còn giúp tôi hiểu rõ hơn cách kết nối chúng thành một hệ thống hoàn chỉnh có thể triển khai, vận hành và trình bày một cách rõ ràng.
+Trong thời gian thực tập tại **FCAJ Cloud Journey** từ **04/05/2026** đến **08/07/2026**, tôi có cơ hội đi từ việc học các workshop nền tảng trên AWS đến triển khai một project full-stack thực tế. Quá trình này không chỉ giúp tôi làm quen với từng dịch vụ cloud riêng lẻ, mà còn giúp tôi hiểu rõ hơn cách kết nối chúng thành một hệ thống hoàn chỉnh có thể triển khai, vận hành và trình bày một cách rõ ràng.
 
 ### Những điểm tôi thực hiện tốt
 
