@@ -8,60 +8,61 @@ pre : " <b> 5.9. </b> "
 
 #### Dọn dẹp tài nguyên
 
-Sau khi hoàn thành workshop triển khai hệ thống Project Management trên AWS, bước dọn dẹp tài nguyên là cần thiết để tránh phát sinh chi phí không mong muốn. Việc xóa nên được thực hiện theo từng nhóm dịch vụ, đi từ lớp ứng dụng bên ngoài vào các tài nguyên hạ tầng bên trong, để hạn chế lỗi phụ thuộc trong quá trình thao tác.
+Sau khi hoàn thành việc triển khai hệ thống **Project Management** trên AWS, bước dọn dẹp tài nguyên là việc nên làm để tránh phát sinh chi phí không cần thiết. Vì các dịch vụ trong project có liên kết với nhau, mình ưu tiên xóa theo thứ tự từ lớp bên ngoài như frontend và API, rồi mới đi dần vào backend, database và phần hạ tầng mạng. Cách làm này giúp hạn chế tình trạng một tài nguyên vẫn còn bị service khác tham chiếu nên chưa thể xóa ngay.
 
 #### Thứ tự thực hiện khuyến nghị
 
 1. **Gỡ frontend trên AWS Amplify**
 
-   Trước tiên, mở **AWS Amplify** và kiểm tra ứng dụng đã được deploy. Nếu không còn nhu cầu giữ môi trường demo, có thể xóa branch đang sử dụng hoặc xóa toàn bộ app hosting.
+   Trước tiên, vào **AWS Amplify** và kiểm tra ứng dụng frontend của project-management đã deploy. Nếu không còn nhu cầu giữ bản demo public nữa, có thể xóa branch đang dùng hoặc xóa toàn bộ hosting app.
 
 2. **Xóa cấu hình xác thực trên Amazon Cognito**
 
-   Tiếp theo, vào **Amazon Cognito** để rà soát các thành phần sau:
+   Tiếp theo, vào **Amazon Cognito** để rà soát lại phần đăng nhập của hệ thống:
 
    - User Pool đã tạo cho project
    - App Client đi kèm
-   - Các user test không còn cần dùng
+   - Các user test đã dùng trong quá trình kiểm thử
 
-   Nếu hệ thống không còn sử dụng lại, nên xóa toàn bộ User Pool để tránh giữ các cấu hình xác thực không cần thiết.
+   Nếu không có ý định dùng lại luồng xác thực này, có thể xóa toàn bộ User Pool để tránh giữ lại những cấu hình không còn giá trị sử dụng.
 
 3. **Xóa API trên Amazon API Gateway**
 
-   Sau phần xác thực, vào **API Gateway** và tiến hành xóa:
+   Sau đó, mở **API Gateway** và xóa phần public endpoint đã tạo cho backend:
 
    - HTTP API hoặc REST API đã tạo
    - Stage deploy liên quan
-   - Authorizer nếu được tạo riêng cho bài lab
+   - Cognito Authorizer nếu được tạo riêng cho project
 
 4. **Xóa Lambda Trigger**
 
-   Nếu trong quá trình triển khai có sử dụng Lambda để xử lý post-confirmation hoặc các trigger liên quan đến Cognito, cần:
+   Trong project này, Lambda được dùng để xử lý sau khi user xác thực thành công. Trước khi xóa function, nên:
 
    - Gỡ trigger ra khỏi User Pool
-   - Xóa function Lambda nếu không dùng nữa
+   - Kiểm tra lại permission hoặc mapping liên quan
+   - Xóa Lambda function nếu không còn dùng nữa
 
 5. **Dừng và xóa EC2 backend**
 
-   Tại **EC2 Console**, thực hiện lần lượt các bước sau:
+   Sau khi frontend, auth và API public đã được gỡ, vào **EC2 Console** để xử lý máy chủ backend:
 
    - Stop instance để kiểm tra lần cuối
-   - Terminate instance backend nếu không cần giữ
-   - Xóa Elastic IP nếu có gán riêng
-   - Xóa key pair trên AWS nếu không còn sử dụng
+   - Terminate instance backend nếu không còn nhu cầu giữ lại
+   - Release Elastic IP nếu trước đó có gán riêng
+   - Xóa key pair trên AWS nếu xác định không dùng lại
 
 6. **Xóa cơ sở dữ liệu Amazon RDS**
 
-   Đối với **Amazon RDS**, cần cân nhắc trước khi xóa để tránh mất dữ liệu cần lưu trữ. Tại **RDS Console**, có thể chọn một trong hai hướng:
+   Tiếp theo là phần **Amazon RDS**, nơi đang chứa dữ liệu của hệ thống Project Management. Trước khi xóa database, nên cân nhắc:
 
-   - **Giữ final snapshot** nếu muốn sao lưu dữ liệu trước khi kết thúc
-   - **Không giữ snapshot** nếu đây chỉ là môi trường lab và không còn nhu cầu phục hồi
+   - **Giữ final snapshot** nếu vẫn muốn lưu lại dữ liệu để đối chiếu hoặc demo sau này
+   - **Không giữ snapshot** nếu đây chỉ là môi trường thực hành và không còn nhu cầu khôi phục
 
-   Sau khi xác định phương án phù hợp, tiến hành xóa database instance.
+   Khi đã xác định rõ phương án, tiến hành xóa database instance.
 
 7. **Xóa S3 bucket lưu hình ảnh**
 
-   Tại **Amazon S3**, thực hiện dọn dẹp theo thứ tự:
+   Ở phần **Amazon S3**, project này có dùng bucket để lưu ảnh hoặc static assets. Với bucket như `project-management-images-aws`, nên dọn theo thứ tự:
 
    - Xóa toàn bộ object trong bucket
    - Xác nhận bucket rỗng
@@ -69,15 +70,15 @@ Sau khi hoàn thành workshop triển khai hệ thống Project Management trên
 
 8. **Xóa Security Group và tài nguyên mạng phụ trợ**
 
-   Sau khi EC2 và RDS đã được xóa, có thể tiếp tục xử lý các tài nguyên mạng đi kèm:
+   Khi EC2, RDS và các service bên ngoài đã được dọn, có thể quay lại xóa các tài nguyên mạng phụ trợ:
 
    - Security Group dùng riêng cho EC2
    - Security Group dùng riêng cho RDS
-   - DB subnet group nếu tạo riêng
+   - DB subnet group nếu đã tạo riêng cho workshop này
 
 9. **Xóa subnet, route table, internet gateway và VPC**
 
-   Nếu VPC này chỉ được tạo riêng cho workshop, nên xóa theo đúng thứ tự sau:
+   Cuối cùng, nếu toàn bộ VPC này chỉ phục vụ cho project-management workshop, có thể xóa theo đúng thứ tự để tránh báo lỗi phụ thuộc:
 
    - Subnet
    - Route table tùy chỉnh
@@ -86,8 +87,8 @@ Sau khi hoàn thành workshop triển khai hệ thống Project Management trên
 
 #### Lưu ý cuối cùng
 
-Trước khi xóa hoàn toàn tài nguyên, cần kiểm tra lại rằng các nội dung sau đã được lưu đầy đủ:
+Trước khi xóa hoàn toàn tài nguyên, mình nên chắc rằng đã lưu lại đầy đủ các nội dung cần giữ cho báo cáo:
 
 - Source code cuối cùng
 - Ảnh chụp màn hình để viết báo cáo
-- Link demo hoặc thông tin cấu hình quan trọng nếu cần đối chiếu sau này
+- Link demo, thông tin cấu hình quan trọng hoặc file `.env` mẫu nếu cần đối chiếu sau này
